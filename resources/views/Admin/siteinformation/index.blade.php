@@ -43,8 +43,8 @@
 																	<tr>
 																		<td>{{ $loop->index+1 }}</td>
 																       <td>
-                                                                    	<a href="{{ route('siteconfig.edit', $siteinformations->id) }}"><button class="p-2 rounded btn-primary">Edit</button></a>
-                                                                        <form action="{{ route('siteconfig.destroy', $siteinformations->id) }}" method="post">
+                                                                    	<a href="{{ route('siteinformation.edit', $siteinformations->id) }}"><button class="p-2 rounded btn-primary">Edit</button></a>
+                                                                        <form action="{{ route('siteinformation.destroy', $siteinformations->id) }}" method="post">
 
 
                                                                         @csrf

@@ -31,7 +31,7 @@
   <div class="about1-area">
       <div class="container">
         @foreach ($sites as $site)
-        @if ($site->site_key=='Welcome To Academics')
+        @if ($site->site_key=='welcome tittle')
           <h1 class="about-title wow fadeIn" data-wow-duration="1s" data-wow-delay=".2s">{{ $site->site_name }} </h1>
           <p class="about-sub-title wow fadeIn" data-wow-duration="1s" data-wow-delay=".2s">{{ $site->site_value }}</p>
           <div class="about-img-holder wow fadeIn" data-wow-duration="2s" data-wow-delay=".2s">

@@ -17,7 +17,7 @@
 													<div class="wizard-wrapper">
 														<div class="wizard-number"></div>
 														<div class="wizard-label">
-															<div class="wizard-title">Edit siteconfig</div><a href="{{ url('siteconfig') }}"><button class="p-2 rounded btn-primary">Back</button></a>
+															<div class="wizard-title">Edit siteinformation</div><a href="{{ url('siteinformation') }}"><button class="p-2 rounded btn-primary">Back</button></a>
 
 														</div>
 
@@ -44,7 +44,7 @@
                                                                 </ul>
                                                             </div>
                                                         @endif
-														<form class="form" id="kt_form" action="{{ route('siteconfig.update', $siteconfig->id) }}" method="POST" enctype="multipart/form-data">
+														<form class="form" id="kt_form" action="{{ route('siteinformation.update', $siteinformation->id) }}" method="POST" enctype="multipart/form-data">
                                                                 @method('PATCH')
                                                                 @csrf
 															<div class="row justify-content-center">
@@ -52,51 +52,33 @@
 																	<!--begin::Wizard Step 1-->
 
 																	<div class="my-5 step" data-wizard-type="step-content" data-wizard-state="current">
-																		<h5 class="mb-10 text-dark font-weight-bold">siteconfig Details:</h5>
+																		<h5 class="mb-10 text-dark font-weight-bold">siteinformation Details:</h5>
 
-
-																		<!--begin::Group-->
-																		<div class="form-group row">
-																			<label class="col-xl-3 col-lg-3 col-form-label">siteconfig Name</label>
-																			<div class="col-lg-9 col-xl-9">
-																				<input class="form-control form-control-solid form-control-lg" name="site_name" value="{{ $siteconfig->site_name }}" type="text" />
-																			</div>
-																		</div>
-																		<!--end::Group-->
 
 																			<!--begin::Group-->
 																			<div class="form-group row">
-																				<label class="col-xl-3 col-lg-3 col-form-label">siteconfig key:</label>
+																				<label class="col-xl-3 col-lg-3 col-form-label">siteinformation key:</label>
 																				<div class="col-lg-9 col-xl-9">
-																					<input class="form-control form-control-solid form-control-lg" name="site_key" type="header" value="{{$siteconfig->site_key}}" />
+																					<input class="form-control form-control-solid form-control-lg" name="site_key" type="header" value="{{$siteinformation->site_key}}" />
 																				</div>
 																			</div>
 																			<!--end::Group-->
                                                                             	<!--begin::Group-->
 																			<div class="form-group row">
-																				<label class="col-xl-3 col-lg-3 col-form-label">siteconfig value:</label>
+																				<label class="col-xl-3 col-lg-3 col-form-label">siteinformation details:</label>
 																				<div class="col-lg-9 col-xl-9">
-																					<input class="form-control form-control-solid form-control-lg" name="site_value" type="text" value="{{$siteconfig->site_value}}" />
+																					<input class="form-control form-control-solid form-control-lg" name="site_details" type="text" value="{{$siteinformation->site_details}}" />
 																				</div>
 																			</div>
 																			<!--end::Group-->
-                                                                            	<!--begin::Group-->
-																			<div class="form-group row">
-																				<label class="col-xl-3 col-lg-3 col-form-label">siteconfig imglink:</label>
-																				<div class="col-lg-9 col-xl-9">
-																					<input class="form-control form-control-solid form-control-lg" name="imglink" type="text" value="{{$siteconfig->imglink}}" />
-																				</div>
-																			</div>
-															
-											
 
 																		<!--begin::Group-->
 																		<div class="form-group row">
 																			<label class="col-form-label col-lg-3 col-sm-12">Status</label>
 																			<div class="col-lg-9 col-md-9 col-sm-12">
 																				<select class="form-control" name="status">
-																					<option value="{{ $siteconfig->status }}">{{ $siteconfig->status }}</option>
-																			@if ($siteconfig->status='Active')
+																					<option value="{{ $siteinformation->status }}">{{ $siteinformation->status }}</option>
+																			@if ($siteinformation->status='Active')
                                                                                     	<option >Deactive</option>
                                                                                     @else
                                                                                     <option >Active</option>
