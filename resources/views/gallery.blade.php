@@ -39,13 +39,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row featuredContainer gallery-wrapper">
+                    <div class="row featuredContainer gallery-wrapper mb-2">
                         @foreach ($galleries as $gallery)
                         @foreach ($gallerycategories as $gallerycategory)
                         @if ($gallerycategory->g_id==$gallery->g_id)
                         <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 {{ $gallerycategory->g_name }}">
                                 <img src="{{'uploads/files/'.$gallery->img_link}}" class="img-responsive" alt="gallery" >
                         </div>
+                        
                         @endif
                         @endforeach
                         @endforeach

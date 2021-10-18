@@ -55,7 +55,7 @@
 																		<div class="form-group row">
 																			<label class="col-xl-3 col-lg-3 col-form-label"> Category Name</label>
 																			<div class="col-lg-9 col-xl-9">
-																				<input class="form-control form-control-solid form-control-lg" name="categoryname" type="text" value="{{ $galleryCategory->g_name }}" />
+																				<input class="form-control form-control-solid form-control-lg" name="g_name" type="text" value="{{ $galleryCategory->g_name }}" />
 																			</div>
 																		</div>
 																		<!--end::Group-->
@@ -64,7 +64,7 @@
 																		<div class="form-group row">
 																			<label class="col-form-label col-lg-3 col-sm-12">Status</label>
 																			<div class="col-lg-9 col-md-9 col-sm-12">
-																				<select class="form-control" name="status">
+																				<select class="form-control" name="g_status">
 																						<option value="{{ $galleryCategory->g_status }}">{{ $galleryCategory->g_status }}</option>
 																			@if ($galleryCategory->g_status='Active')
                                                                                     	<option >Deactive</option>

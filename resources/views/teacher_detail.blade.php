@@ -44,7 +44,6 @@
                     <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
                         <h3 class="title-default-left title-bar-big-left-close">About Me</h3>
                         <p>{{ $teacher_detail->details}}</p>
-                        
                     </div>
                 </div>
             </div>

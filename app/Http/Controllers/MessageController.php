@@ -56,7 +56,7 @@ class MessageController extends Controller
 
         $message->save();
 
-        return redirect('teachers')->with('sucess', 'Message sucessfully created');
+        return redirect('contacts')->with('success', 'Message sucessfully created');
 
     }
 

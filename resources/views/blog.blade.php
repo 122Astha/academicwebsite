@@ -31,23 +31,22 @@
                           @foreach ($blogs as $blog)
                             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                                 <div class="research-box2">
-                                <a href="{{ url('blog_details/'.$blog->id) }}">
+                                   <a href="{{ url('blog_details/'.$blog->id) }}">
                                     <div class="research-img-holder">
                                         <img src="{{asset('uploads/files/'. $blog->img_link) }}" alt="research" class="img-responsive">
                                     </div>
                                     <div class="research-details ml-5" style="font-size:20px; ">
                                         {{ $blog->tittle }}  </a>
-                                        </div>
+                                     </div>
                                     <p>{{$blog->text}}</p>
                                 </div>
                             </div>
                          @endforeach 
-                     </div>
+                    </div>
                     <div class="sidebar col-md-3">
-                  
                         <div class="sidebar">
                             <div class="sidebar-box">
-                                <div class="sidebar-box-inner">
+                                <div class="sidebar-box-inner" >
                                     <h3 class="sidebar-title">Search</h3>
                                     <div class="sidebar-find-course">
                                         <form id="checkout-form">
@@ -75,9 +74,7 @@
                                     </div>
                                 </div>
                             </div>
-                          
                         </div>
-                   
                     </div>
                 </div>
             </div>

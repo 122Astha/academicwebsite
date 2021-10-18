@@ -98,7 +98,7 @@ class IndexController extends Controller
        //$courses = Course::find($id);
         $categories = Coursecat::all();
        // return $courses;
-$course=Course::where('id',$id)->first();
+$course=Course::where('c_id',$id)->get();
  $sites = SiteConfig::all();
 
         return view('course', compact('course', 'categories','sites'));
