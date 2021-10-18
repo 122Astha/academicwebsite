@@ -75,21 +75,20 @@
                             
                                 <!-- Listed product show -->
                                 <div role="tabpanel" class="tab-pane active" id="list-view">
-                                    @foreach($course as $courses)
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div class="courses-box3">
                                             <div class="single-item-wrapper">
                                                 <div class="courses-img-wrapper ">
-                                                    <img class="img-responsive" src="{{asset('uploads/files/'.$courses->imglink)  }}" alt="courses">
+                                                    <img class="img-responsive" src="{{asset('uploads/files/'.$course->imglink)  }}" alt="courses">
                                                     
                                                 </div>
                                                 <div class="courses-content-wrapper">
-                                                    <h3 class="item-title"><a href="#">{{ $courses->name }}</a></h3>
+                                                    <h3 class="item-title"><a href="{{ url('course_details/'.$course->id) }}">{{ $course->name }}</a></h3>
                                                     <p class="item-content">Rmply dummy text printing setting industry iLorem ipsum dolor sit consectetuer adipiscing elit et diam nonummy.t’s free demo.</p>
                                                     <ul class="courses-info">
-                                                        <li>{{ $courses->duration }}
+                                                        <li>{{ $course->duration }}
                                                             <br><span> Duration</span></li>
-                                                        <li>{{ $courses->time }}
+                                                        <li>{{ $course->time }}
                                                             <br><span> Time</span></li>
                                                     </ul>
 
@@ -97,7 +96,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    @endforeach
                                 </div>
                         </div>
                     </div>
