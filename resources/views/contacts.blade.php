@@ -40,7 +40,7 @@
                                     <h3>Phone</h3>
                                     @foreach ($sites as $site)
                                     @if ($site->site_key=='contact')
-                                    <p><a href="tel:{{ $site->site_value }}">{{ $site->site_value }}</a></p>
+                                    <p><a href="tel:{{ $site->site_value }}"></a>{{ $site->site_value }}</p>
                                     @endif
                                     @endforeach
                                 <li>

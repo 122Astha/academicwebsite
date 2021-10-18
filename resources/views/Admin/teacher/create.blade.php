@@ -93,9 +93,9 @@
 																		<!--end::Group-->
 																		<!--begin::Group-->
 																		<div class="form-group row">
-																			<label class="col-xl-3 col-lg-3 col-form-label">Teacher Address</label>
+																			<label class="col-xl-3 col-lg-3 col-form-label">Teacher Email Address</label>
 																			<div class="col-lg-9 col-xl-9">
-																				<input class="form-control form-control-solid form-control-lg" name="address" type="text" />
+																				<input class="form-control form-control-solid form-control-lg" name="address" type="email" />
 																			</div>
 																		</div>
 																		<!--end::Group-->

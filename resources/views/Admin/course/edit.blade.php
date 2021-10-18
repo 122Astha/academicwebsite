@@ -114,6 +114,43 @@
 																			</div>
 																		</div>
 																		<!--end::Group-->
+																		{{-- <div class="form-group row">
+																			<label class="col-form-label col-lg-3 col-sm-12">Course Category </label>
+																			<div class="col-lg-9 col-md-9 col-sm-12">
+																				<select class="form-control" name="c_id">
+																					<option value="">Select</option>
+
+                                                                                    @foreach ($coursecat as $coursecats )
+
+																						<option value="{{ $coursecats->c_id }}">{{ $coursecats->c_name }}</option>
+                                                                                    @endforeach
+
+
+
+																				</select>
+																				<span class="form-text text-muted">Please select a category.</span>
+																			</div>
+																		</div> --}}
+														
+																		{{--  --}}
+																		<div class="form-group row">
+																			<label class="col-form-label col-lg-3 col-sm-12">Course Category </label>
+																			<div class="col-lg-9 col-md-9 col-sm-12">
+																				<select class="form-control" name="c_id">
+																					@foreach ($coursecat as $coursecats )
+																					@if($coursecats->c_id==$coursecat->c_id)
+																						<option value="{{ $coursecats->c_id }}" selected>{{ $coursecats->c_name }}</option>
+																						@endif
+																						<option value="{{ $coursecats->c_id }}" >{{ $coursecats->c_name }}</option>
+                                                                                    @endforeach
+
+
+
+																				</select>
+																				<span class="form-text text-muted">Please select a category.</span>
+																			</div>
+																		</div>
+																		{{--  --}}
 
 
 																	</div>

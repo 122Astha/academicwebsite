@@ -38,7 +38,7 @@
                     @endif
                     @foreach ($teachers as $teacher)
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                          <a href="{{ url('teacher_details/'.$teacher->id) }}">
+                          <a href="{{ url('teacher_detail/'.$teacher->id) }}">
                                 <div class="single-item">
                                     <div class="lecturers1-item-wrapper">
                                         <div class="lecturers-img-wrapper">

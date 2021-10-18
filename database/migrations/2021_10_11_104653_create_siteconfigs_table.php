@@ -14,7 +14,7 @@ class CreateSiteconfigsTable extends Migration
     public function up()
     {
         Schema::create('siteconfigs', function (Blueprint $table) {
-            $table->id();
+              $table->id();
              $table->string('site_key');
             $table->text('site_value');
              $table->string('site_name');

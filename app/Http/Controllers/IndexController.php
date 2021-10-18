@@ -129,7 +129,7 @@ $course=Course::where('id',$id)->first();
         $teacher_detail = Teacher::find($id);
         $sites = SiteConfig::all();
          $categories = Coursecat::all();
-        return view('teacher_details', compact('teacher_detail','sites','categories'));
+        return view('teacher_detail', compact('teacher_detail','sites','categories'));
     }
 
 

@@ -6,12 +6,14 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-2 col-md-2 col-sm-3">
-                                @foreach ($sites as $site)
-                                @if ($site->site_key=='logo')
+                                <div class="logo-area">
+                                    @foreach ($sites as $site)
+                                    @if ($site->site_key=='logo')
                                    <img src="{{ asset('uploads/files/'.$site->imglink) }}"/>
+                                   @endif
+                                   @endforeach
+                                </div>
                                 
-                                @endif
-                                @endforeach
                             </div>
                             <div class="col-lg-8 col-md-8 col-sm-9">
                                 <nav id="desktop-nav">

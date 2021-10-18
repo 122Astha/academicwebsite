@@ -16,7 +16,7 @@
 													<div class="wizard-wrapper">
 														<div class="wizard-number"></div>
 														<div class="wizard-label">
-															<div class="wizard-title">Edit Gallery Category</div><a href="{{ url('galleryCategory') }}"><button class="p-2 rounded btn-primary">Back</button></a>
+															<div class="wizard-title"> Siteconfig Informations</div><a href="{{ url('siteinformation') }}"><button class="p-2 rounded btn-primary">Back</button></a>
 
 														</div>
 													</div>
@@ -32,46 +32,53 @@
 												<div class="px-8 py-8 row justify-content-center py-lg-15 px-lg-10">
 													<div class="col-xl-12 col-xxl-10">
 														<!--begin::Wizard Form-->
-																							 @if ($errors->any())
-        <div class="alert alert-danger">
-            <strong>Whoops!</strong> There were some problems with your input.<br><br>
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-														<form class="form" id="kt_form" action="{{ route('galleryCategory.update',$galleryCategory->g_id) }}" method="POST" enctype="multipart/form-data">
-															@method('PATCH')
-															@csrf
+                                                                                                               @if ($errors->any())
+                                                            <div class="alert alert-danger">
+                                                                <strong>Whoops!</strong> There were some problems with your input.<br><br>
+                                                                <ul>
+                                                                    @foreach ($errors->all() as $error)
+                                                                        <li>{{ $error }}</li>
+                                                                    @endforeach
+                                                                </ul>
+                                                            </div>
+                                                        @endif
+														<form class="form" id="kt_form" action="{{ route('siteinformation.store') }}" method="POST" enctype="multipart/form-data">
+                                                            @csrf
 															<div class="row justify-content-center">
 																<div class="col-xl-9">
 																	<!--begin::Wizard Step 1-->
+
 																	<div class="my-5 step" data-wizard-type="step-content" data-wizard-state="current">
-																		<h5 class="mb-10 text-dark font-weight-bold">Gallery Category Details:</h5>
+																		<h5 class="mb-10 text-dark font-weight-bold">siteconfig Details:</h5>
 
-																		<!--begin::Group-->
-																		<div class="form-group row">
-																			<label class="col-xl-3 col-lg-3 col-form-label"> Category Name</label>
-																			<div class="col-lg-9 col-xl-9">
-																				<input class="form-control form-control-solid form-control-lg" name="categoryname" type="text" value="{{ $galleryCategory->g_name }}" />
-																			</div>
+
+																			<!--begin::Wizard Step 2-->
+                                                                            <div class="form-group row">
+																				<label class="col-xl-3 col-lg-3 col-form-label">Site_key</label>
+																				<div class="col-lg-9 col-xl-9">
+																					<input class="form-control form-control-solid form-control-lg" name="site_key" type="text"  />
+																				</div>
 																		</div>
-																		<!--end::Group-->
+																		<!--end::Wizard Step 2-->
 
+
+																		<!--begin::Wizard Step 2-->
+																		<div class="form-group row">
+																				<label class="col-xl-3 col-lg-3 col-form-label">Site_Details</label>
+																				<div class="col-lg-9 col-xl-9">
+																					<input class="form-control form-control-solid form-control-lg" name="site_details" type="text"  />
+																				</div>
+																		</div>
+																		<!--end::Wizard Step 2-->
 																		<!--begin::Group-->
 																		<div class="form-group row">
 																			<label class="col-form-label col-lg-3 col-sm-12">Status</label>
 																			<div class="col-lg-9 col-md-9 col-sm-12">
 																				<select class="form-control" name="status">
-																						<option value="{{ $galleryCategory->g_status }}">{{ $galleryCategory->g_status }}</option>
-																			@if ($galleryCategory->g_status='Active')
-                                                                                    	<option >Deactive</option>
-                                                                                    @else
-                                                                                    <option >Active</option>
+																					<option >Select</option>
+																					<option>Active</option>
+																					<option>Deactive</option>
 
-                                                                                    @endif
 																				</select>
 																				<span class="form-text text-muted">Please select a status.</span>
 																			</div>
@@ -86,8 +93,7 @@
 																	<div class="pt-10 d-flex justify-content-between border-top mt-15">
 
 																		<div>
-
-																			<button class="py-4 btn btn-primary font-weight-bolder px-9" type="submit" name="submit">Edit</button>
+																			<button class="py-4 btn btn-primary font-weight-bolder px-9" type="submit" name="submit">Submit</button>
 																		</div>
 																	</div>
 																	<!--end::Wizard Actions-->

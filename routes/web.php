@@ -16,6 +16,7 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\NoticeController;
 use App\Http\Controllers\SiteconfigController;
+use App\Http\Controllers\SiteinformationController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\WhychooseusController;
 use App\Http\Controllers\IndexController;
@@ -65,6 +66,7 @@ Route::resource('files', FileController::class)->middleware('AuthCheck');
 Route::resource('course', CourseController::class)->middleware('AuthCheck');
 Route::resource('coursecat', CoursecatController::class)->middleware('AuthCheck');
 Route::resource('admission', AdmissionController::class)->middleware('AuthCheck');
+Route::resource('siteinformation', siteinformationController::class)->middleware('AuthCheck');
 
 Route::get('/', function () {
     return view('index');
@@ -97,7 +99,7 @@ Route::get('/news_details/{id}','App\Http\Controllers\IndexController@news_detai
 Route::get('/blog_details/{id}', 'App\Http\Controllers\IndexController@blog_details'); 
 Route::get('/event_details/{id}','App\Http\Controllers\IndexController@event_details');
 Route::get('/course_details/{id}','App\Http\Controllers\IndexController@course_details');
-Route::get('/teacher_details/{id}','App\Http\Controllers\IndexController@teacher_details');
+Route::get('/teacher_detail/{id}','App\Http\Controllers\IndexController@teacher_details');
 Route::get('/contacts','App\Http\Controllers\IndexController@contacts');
 
 

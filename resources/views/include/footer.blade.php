@@ -5,17 +5,45 @@
                     <div class="row">
                         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                             <div class="footer-box">
-                                <a href="index.html"><img class="img-responsive" src="img/logo-footer.png" alt="logo"></a>
+                                @foreach ($sites as $site)
+                                    @if ($site->site_key=='logo')
+                                   <img src="{{ asset('uploads/files/'.$site->imglink) }}"/>
+                                   @endif
+                                   @endforeach
                                 <div class="footer-about">
-                                    <p>Praesent vel rutrum purus. Nam vel dui eu sus duis dignissim dignissim. Suspenetey disse at ros tecongueconsequat.Fusce sit amet rna feugiat.</p>
+                                    @foreach ($sites as $site)
+                                    @if ($site->site_key=='footer_content')
+                                   <p>{{ $site->site_value }}</p>
+                                   @endif
+                                   @endforeach
                                 </div>
                                 <ul class="footer-social">
-                                    <li><a href="https://www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                    <li><a href="https://www.twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                    <li><a href="https://www.linkedin.com"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                    <li><a href="https://www.pinterest.com"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-                                    <li><a href="https://www.rss.com"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
-                                    <li><a href="https://www.google.com"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                    @foreach ($sites as $site)
+                                    @if ($site->site_key=='facebook')
+                                    <li><a href="{{$site->site_value}}"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    @endif
+                                        @endforeach
+                                    @foreach ($sites as $site)
+                                    @if ($site->site_key=='youtube')
+                                    <li><a class="youtube" href="{{$site->site_value}}"><i class="fa fa-youtube-play"></i></a></li>
+                                    @endif
+                                        @endforeach
+                                    @foreach ($sites as $site)
+                                    @if ($site->site_key=='google')
+                                    <li><a class="google-plus" href="{{$site->site_value}}"><i class="fa fa-google-plus"></i></a></li>
+                                    @endif
+                                        @endforeach
+                                     @foreach ($sites as $site)
+                                        @if ($site->site_key=='twitter')
+                                        <li><a href="{{ $site->site_value }}" data-bg-color="#02B0E8"><i class="fa fa-twitter"></i></a></li>
+                                        @endif
+                             
+                                        @endforeach
+                                        @foreach ($sites as $site)
+                                        @if ($site->site_key=='linkedin')
+                                        <li><a href="{{ $site->site_value }}" data-bg-color="#02B0E8"><i class="fa fa-linkedin"></i></a></li>
+                                        @endif
+                                        @endforeach
                                 </ul>
                             </div>
                         </div>
@@ -25,18 +53,23 @@
                                 <ul class="featured-links">
                                     <li>
                                         <ul>
-                                            
-                                            <li><a href="aboutus.php">About Us</a></li>
-                                            <li><a href="course.php">Course</a></li>
-                                            <li><a href="notice.php">Examination</a></li>
+                                            <li><a href="{{ url('index') }}">Home</a></li>
+                                <li><a href="{{ url('aboutus') }}">About Us</a></li>
+                                <li><a href="{{ url('notices') }}">Examination</a></li>
+                                <li><a href="{{ url('teachers') }}">Teacher</a></li>
+                                <li><a href="{{ url('contacts') }}">Contact</a></li>
+                                <li><a href="{{ url('admissions') }}">Admission</a></li>
                                         </ul>
                                     </li>
                                     <li>
+                                        <div class="col-lg-2 col-md-2 col-sm-12">
+                                            <div class="footer-widget negative-mrg-30 mb-40">
+                                                <div class="footer-list">
                                         <ul>
-                                            <li><a href="teachers.php">Teachers</a></li>
-                                            <li><a href="gallery.php">Pages</a></li>
-                                            <li><a href="contact.php">Contact</a></li>
-                                         
+                                            <li><a href="{{ url('galleries') }}">Gallery</a></li>
+                                            <li><a href="{{ url('events') }}">Event</a></li>
+                                             <li><a href="{{ url('blogs') }}">Blogs</a></li>
+                                              <li><a href="{{ url('newses') }}">News</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -48,7 +81,7 @@
                                 <ul class="corporate-address">
                                     @foreach ($sites as $site)
                                     @if ($site->site_key=='contact')
-                                    <p><a href="tel:{{ $site->site_value }}">{{ $site->site_value }}</a></p>
+                                    <p><a href="tel:{{ $site->site_value }}"></a>{{ $site->site_value }}</p>
                                     @endif
                                     @endforeach
                                     @foreach ($sites as $site)

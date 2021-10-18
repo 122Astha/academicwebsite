@@ -10,6 +10,6 @@ class Coursecat extends Model
     use HasFactory;
     protected $primaryKey='c_id';
        protected $fillable=(
-        [ 'c_name', 'c_status',]
+        [ 'c_id','c_name', 'c_status',]
     );
 }
