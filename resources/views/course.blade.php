@@ -30,7 +30,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12 col-md-push-3">
-                        <div class="row">
+                        {{-- <div class="row">
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <!-- Listed product show -->
@@ -64,16 +64,39 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <ul class="pagination-left">
-                                    <li class="active"><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                </ul>
+                         </div> --}}
+                         <div class="row">
+                            <!-- Tab panes -->
+                            @if ($message = Session::get('success'))
+                            <div class="alert alert-success">
+                                <p>{{ $message }}</p>
                             </div>
+                            @endif
+                            
+                                <!-- Listed product show -->
+                                <div role="tabpanel" class="tab-pane active" id="list-view">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="courses-box3">
+                                            <div class="single-item-wrapper">
+                                                <div class="courses-img-wrapper ">
+                                                    <img class="img-responsive" src="{{asset('uploads/files/'.$course->imglink)  }}" alt="courses">
+                                                    
+                                                </div>
+                                                <div class="courses-content-wrapper">
+                                                    <h3 class="item-title"><a href="{{ url('course_details/'.$course->id) }}">{{ $course->name }}</a></h3>
+                                                    <p class="item-content">Rmply dummy text printing setting industry iLorem ipsum dolor sit consectetuer adipiscing elit et diam nonummy.t’s free demo.</p>
+                                                    <ul class="courses-info">
+                                                        <li>{{ $course->duration }}
+                                                            <br><span> Duration</span></li>
+                                                        <li>{{ $course->time }}
+                                                            <br><span> Time</span></li>
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 col-md-pull-9">

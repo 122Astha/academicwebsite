@@ -82,7 +82,8 @@ class courseController extends Controller
      */
     public function edit(course $course)
     {
-         return view('admin.course.edit',compact('course'));
+        $category=Coursecat::all();
+         return view('admin.course.edit',compact('category','course'));
     }
 
     /**

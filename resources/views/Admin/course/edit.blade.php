@@ -84,7 +84,7 @@
                                                                         <div class="form-group row">
                                                                             <label class="col-xl-3 col-lg-3 col-form-label">Course Duration:</label>
                                                                             <div class="col-lg-9 col-xl-9">
-                                                                                <input class="form-control form-control-solid form-control-lg" name="duration" type="text" value="{{$course->duration}}" />
+                                                                                <input class="form-control form-control-solid form-control-lg" name="duration" type="date" value="{{$course->duration}}" />
                                                                             </div>
                                                                         </div>
                                                                         <!--end::Group-->
@@ -113,35 +113,16 @@
 																				<span class="form-text text-muted">Please select a status.</span>
 																			</div>
 																		</div>
-																		<!--end::Group-->
-																		{{-- <div class="form-group row">
-																			<label class="col-form-label col-lg-3 col-sm-12">Course Category </label>
-																			<div class="col-lg-9 col-md-9 col-sm-12">
-																				<select class="form-control" name="c_id">
-																					<option value="">Select</option>
 
-                                                                                    @foreach ($coursecat as $coursecats )
-
-																						<option value="{{ $coursecats->c_id }}">{{ $coursecats->c_name }}</option>
-                                                                                    @endforeach
-
-
-
-																				</select>
-																				<span class="form-text text-muted">Please select a category.</span>
-																			</div>
-																		</div> --}}
-														
-																		{{--  --}}
 																		<div class="form-group row">
 																			<label class="col-form-label col-lg-3 col-sm-12">Course Category </label>
 																			<div class="col-lg-9 col-md-9 col-sm-12">
 																				<select class="form-control" name="c_id">
-																					@foreach ($coursecat as $coursecats )
-																					@if($coursecats->c_id==$coursecat->c_id)
-																						<option value="{{ $coursecats->c_id }}" selected>{{ $coursecats->c_name }}</option>
+                                                                                    @foreach ($category as $categories )
+																					@if($categories->c_id==$course->c_id)
+																						<option value="{{ $categories->c_id }}" selected>{{ $categories->c_name }}</option>
 																						@endif
-																						<option value="{{ $coursecats->c_id }}" >{{ $coursecats->c_name }}</option>
+																						<option value="{{ $categories->c_id }}" >{{ $categories->c_name }}</option>
                                                                                     @endforeach
 
 
@@ -150,9 +131,6 @@
 																				<span class="form-text text-muted">Please select a category.</span>
 																			</div>
 																		</div>
-																		{{--  --}}
-
-
 																	</div>
 																	<!--end::Wizard Step 1-->
 

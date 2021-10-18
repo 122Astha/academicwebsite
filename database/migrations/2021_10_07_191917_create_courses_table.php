@@ -18,7 +18,7 @@ class CreateCoursesTable extends Migration
              $table->string('name');
              $table->text('text');
               $table->time('time');
-              $table->string('duration');
+              $table->date('duration');
               $table->text('imglink');
                $table->integer('c_id');
                $table->string('status',50);
