@@ -43,9 +43,7 @@
                                                
                                             </ul>
                                         </li>
-                                        <li><a href="teachers">Teachers</a>
-                                           
-                                           </li>
+                                        <li><a href="{{ url('teachers')}}">Teachers</a></li>
                                              
                                         <li><a href="#">Pages</a>
                                             <ul>

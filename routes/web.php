@@ -49,6 +49,9 @@ Route::get('/register', 'App\Http\Controllers\LoginController@register')->name('
 
 
 Route::get('/admin/dashboard', 'App\Http\Controllers\LoginController@dashboard')->middleware('AuthCheck');
+Route::post('/message', 'App\Http\Controllers\MessageController@index')->middleware('Authcheck');
+Route::post('/admission', 'App\Http\Controllers\AdmissionController@index')->middleware('AuthCheck');
+
 
 Route::resource('galleryCategory', GalleryCategoryController::class)->middleware('AuthCheck');
 Route::resource('gallery', GalleryController::class)->middleware('AuthCheck');
@@ -99,7 +102,7 @@ Route::get('/news_details/{id}','App\Http\Controllers\IndexController@news_detai
 Route::get('/blog_details/{id}', 'App\Http\Controllers\IndexController@blog_details'); 
 Route::get('/event_details/{id}','App\Http\Controllers\IndexController@event_details');
 Route::get('/course_details/{id}','App\Http\Controllers\IndexController@course_details');
-Route::get('/teacher_detail/{id}','App\Http\Controllers\IndexController@teacher_details');
+Route::get('/teacher_details/{id}','App\Http\Controllers\IndexController@teacher_details');
 Route::get('/contacts','App\Http\Controllers\IndexController@contacts');
 
 

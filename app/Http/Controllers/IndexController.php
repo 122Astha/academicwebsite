@@ -99,7 +99,7 @@ class IndexController extends Controller
         $categories = Coursecat::all();
        // return $courses;
 // $course=Course::where('c_id',$id)->get();
-$course=Course::where('id',$id)->first();
+$course=Course::where('c_id',$id)->first();
  $sites = SiteConfig::all();
 
         return view('course', compact('course', 'categories','sites'));
@@ -128,10 +128,10 @@ $course=Course::where('id',$id)->first();
       public function teacher_details($id)
     {
         $teacher_detail = Teacher::find($id);
-        $teacher=Teacher::all();
-        $sites = SiteConfig::all();
-         $categories = Coursecat::all();
-        return view('teacher_detail', compact('teacher','teacher_detail','sites','categories'));
+ $sites = SiteConfig::all();
+ $categories = Coursecat::all();
+ $courses= Course::all();
+        return view('teacher_details', compact('teacher_detail','sites','categories','courses'));
     }
 
 

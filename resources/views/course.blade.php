@@ -30,41 +30,6 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12 col-md-push-3">
-                        {{-- <div class="row">
-                            <!-- Tab panes -->
-                            <div class="tab-content">
-                                <!-- Listed product show -->
-                                @if ($message = Session::get('success'))
-                                <div class="alert alert-success">
-                                    <p>{{ $message }}</p>
-                                </div>
-                                @endif
-                                <div role="tabpanel" class="tab-pane active" id="list-view">
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <a href="{{ url('course_details/'.$course->id) }}">
-                                        <div class="courses-box3">
-                                            <div class="single-item-wrapper">
-                                                <div class="  hvr-bounce-to-right">
-                                                    <img  src="{{asset('uploads/files/'.$course->imglink)  }}" alt="courses">
-                                                </div>
-                                                <div class="courses-content-wrapper">
-                                                    <h3 class="item-title"><a href="{{ url('course_details/'.$course->id) }}">{{ $course->name }}</a></h3>
-                                                    <ul class="courses-info">
-                                                        <li>1 Year
-                                                            <br><span> Course</span></li>
-                                                        <li>15
-                                                            <br><span> Classes</span></li>
-                                                        <li>05 pm - 07 pm
-                                                            <br><span> Time</span></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                         </div> --}}
                          <div class="row">
                             <!-- Tab panes -->
                             @if ($message = Session::get('success'))
@@ -113,7 +78,7 @@
                                                 <div class="custom-select">
                                                     <select id="district" class='select2'>
                                                         @foreach ($categories as $category)
-                                                        <option value="0"><a href="{{ url('course_details/'.$course->id) }} ">{{ $category->c_name }}</a></option>
+                                                        <option value="0"><a href="{{ url('courses/'.$category->c_id) }} ">{{ $category->c_name }}</a></option>
                                                         @endforeach
                                                     </select>
                                                 </div>
@@ -130,8 +95,8 @@
                                     <h3 class="sidebar-title">Class Categories</h3>
                                     <ul class="sidebar-categories">
                                         @foreach ($categories as $category)
-                                        <li><a href="{{ url('course_details/'.$course->id) }} ">{{ $category->c_name }}</a></li>
-                                     @endforeach
+                                                  <li><a href="{{ url('courses/'.$category->c_id) }}">{{ $category->c_name }}</a></li>
+                                                @endforeach
                                     </ul>
                                 </div>
                             </div>

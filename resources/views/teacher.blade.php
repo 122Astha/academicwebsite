@@ -31,29 +31,24 @@
         <div class="lecturers-page1-area">
             <div class="container">
                 <div class="row">
-                    @if ($message = Session::get('success'))
-                    <div class="alert alert-success">
-                        <p>{{ $message }}</p>
-                    </div>
-                    @endif
                     @foreach ($teachers as $teacher)
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                          <a href="{{ url('teacher_detail/'.$teacher->id) }}">
-                                <div class="single-item">
-                                    <div class="lecturers1-item-wrapper">
-                                        <div class="lecturers-img-wrapper">
-                                            <img class="img-responsive" src="{{asset('uploads/files/'.$teacher->img_link)  }}" alt="team">
-                                        </div>
+                        <div class="single-item">
+                            <div class="lecturers1-item-wrapper">
+                                <div class="lecturers-img-wrapper">
+                                            <a href="{{ url('teacher_details/'.$teacher->id) }}">
+                                               <img class="img-responsive" src="{{asset('uploads/files/'.$teacher->img_link)  }}" alt="team">
+                                            </a>
+                                </div>
                                         <div class="lecturers-content-wrapper">
-                                            <h3 class="item-title">{{ $teacher->name }}</h3>
-                                            <h5 class="mt-0 sub-title mb-15">{{ $teacher->post }}</h5>
+                                            <h3 class="item-title"> <b><a href="{{ url('teacher_details/'.$teacher->id) }}">{{ $teacher->name }}</a></b> </h3>
+                                            <h4 class="item-title"><a href="{{ url('teacher_details/'.$teacher->id) }}">Position:{{ $teacher->post }}</a></h4>
                                         
                                         </div>
-                                    </div>
-                                </div>
-                          </a>
+                            </div>
                         </div>
-                      @endforeach
+                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
