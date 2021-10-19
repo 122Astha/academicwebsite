@@ -48,5 +48,33 @@
                 </div>
             </div>
         </div>
+
+        {{-- test --}}
+        {{-- <div class="lecturers-page-area">
+            <div class="container">
+                <div class="row">
+                    @foreach($teacher as $teachers)
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="lecturers-contact-info">
+                            <img src="{{asset('uploads/files/'.$teachers->img_link)  }}" class="img-responsive" alt="team">
+                            <h2>{{ $teachers->name }}</h2>
+                            <h3>{{ $teachers->post }}</h3>
+                            <ul class="lecturers-contact">
+                                <li><i class="fa fa-phone" aria-hidden="true"></i>{{ $teachers->contact }}</li>
+                                <li><i class="fa fa-envelope-o" aria-hidden="true"></i>{{ $teachers->address }}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    @endforeach
+                    <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+                        <h3 class="title-default-left title-bar-big-left-close">About Me</h3>
+                        @foreach($teacher as $teachers)
+                        <p>{{ $teachers->details}}</p>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div> --}}
+        {{-- test --}}
         <!-- Courses Page 3 Area End Here -->
         <!-- Footer Area Start Here -->

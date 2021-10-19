@@ -17,109 +17,8 @@
                  </div>
              </div>
      </div>
-        <!-- Inner Page Banner Area End Here -->
-        <!--Blog Area Start Here -->
-        {{-- <div class="research-page2-area">
-            <div class="container">
-                <div class="row">
-                    @if ($message = Session::get('success'))
-                    <div class="col-md-9">
-                          <div class="alert alert-success">
-                              <p>{{ $message }}</p>
-                          </div>
-                          @endif
-                          @foreach ($blogs as $blog)
-                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                <div class="research-box2">
-                                   <a href="{{ url('blog_details/'.$blog->id) }}">
-                                    <div class="research-img-holder">
-                                        <img src="{{asset('uploads/files/'. $blog->img_link) }}" alt="research" class="img-responsive">
-                                    </div>
-                                    <div class="research-details ml-5" style="font-size:20px; ">
-                                        {{ $blog->tittle }}  </a>
-                                     </div>
-                                    <p>{{$blog->text}}</p>
-                                </div>
-                            </div>
-                    </div>
-                        @endforeach  --}}
-                    {{-- <div class="sidebar col-md-3">
-                        <div class="sidebar">
-                            <div class="sidebar-box">
-                                <div class="sidebar-box-inner" >
-                                    <h3 class="sidebar-title">Search</h3>
-                                    <div class="sidebar-find-course">
-                                        <form id="checkout-form">
-                                            <div class="form-group course-name">
-                                                <input id="first-name" placeholder="Research Name" class="form-control" type="text" />
-                                            </div>
-                                            <div class="form-group">
-                                                <button class="sidebar-search-btn-full disabled" type="submit" value="Login">Search</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sidebar-box">
-                                <div class="sidebar-box-inner">
-                                    <h3 class="sidebar-title">Latest Blogs</h3>
-                                    <div class="sidebar-latest-research-area">
-                                        @foreach ($blogs as $blog)
-                                        <ul>
-                                            <li><a href="{{ url('blog_details/'.$blog->id) }}">{{ $blog->tittle }}</a>
-                                                
-                                            </li>
-                                        </ul>
-                                        @endforeach
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> --}}
-                    {{-- <div class="sidebar col-md-3">
-                        <div class="sidebar">
-                            <div class="sidebar-box">
-                                <div class="sidebar-box-inner">
-                                    <h3 class="sidebar-title">Search</h3>
-                                    <div class="sidebar-find-course">
-                                        <form id="checkout-form">
-                                            <div class="form-group course-name">
-                                                <input id="first-name" placeholder="Research Name" class="form-control" type="text" />
-                                            </div>
-                                            <div class="form-group">
-                                                <button class="sidebar-search-btn-full disabled" type="submit" value="Login">Search</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sidebar-box">
-                                <div class="sidebar-box-inner">
-                                    <h3 class="sidebar-title">Latest Blogs</h3>
-                                    <div class="sidebar-latest-research-area">
-                                        <ul>
-                                            @foreach ($blogs as $blog)
-                                            <li>
-                                                <div class="latest-research-img">
-                                                    <a href="{{ url('blog_details/'.$blog->id) }}"><img src="{{ asset('uploads/files/'.$blog->img_link) }}" class="img-responsive" alt="skilled">{{ $blog->tittle }}</a>
-                                                </div>
-                                                <div class="latest-research-content">
-                                                    <p>{{ $blog->tittle }}</p>
-                                                </div>
-                                            </li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                          
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
 
-        {{-- test --}}
+        {{-- Blog area --}}
         <div class="research-details-page-area">
             <div class="container">
                 <div class="row">
@@ -129,7 +28,6 @@
                     </div>
                     @endif
                     <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-                        {{-- <div class="col-md-9"> --}}
                               @foreach ($blogs as $blog)
                                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                                     <div class="research-box2">
@@ -144,7 +42,6 @@
                                     </div>
                                 </div>
                                 @endforeach 
-                        {{-- </div> --}}
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                         <div class="sidebar">
@@ -185,5 +82,4 @@
                 </div>
             </div>
         </div>
-        {{-- test --}}
         <!-- Blogs Area End Here -->

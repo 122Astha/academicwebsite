@@ -128,9 +128,10 @@ $course=Course::where('id',$id)->first();
       public function teacher_details($id)
     {
         $teacher_detail = Teacher::find($id);
+        $teacher=Teacher::all();
         $sites = SiteConfig::all();
          $categories = Coursecat::all();
-        return view('teacher_detail', compact('teacher_detail','sites','categories'));
+        return view('teacher_detail', compact('teacher','teacher_detail','sites','categories'));
     }
 
 
@@ -164,6 +165,7 @@ $course=Course::where('id',$id)->first();
     public function event_details($id)
     {
         $event_details = Event::find($id);
+        // to take all data of events from database 
         $event=Event::all();
  $sites = SiteConfig::all();
   $categories = Coursecat::all();
