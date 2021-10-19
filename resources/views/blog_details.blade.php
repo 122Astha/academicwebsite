@@ -56,10 +56,10 @@
                                             @foreach ($blog as $blogs)
                                             <li>
                                                 <div class="latest-research-img">
-                                                    <a href="#"><img src="{{ asset('uploads/files/'.$blogs->img_link) }}" class="img-responsive" alt="skilled"></a>
+                                                    <a href="{{ url('blog_details/'.$blogs->id) }}"><img src="{{ asset('uploads/files/'.$blogs->img_link) }}" class="img-responsive" alt="skilled"></a>
                                                 </div>
                                                 <div class="latest-research-content">
-                                                    <p>{{ $blogs->tittle }}</p>
+                                                    <a>{{ $blogs->tittle }}</a>
                                                 </div>
                                             </li>
                                             @endforeach
