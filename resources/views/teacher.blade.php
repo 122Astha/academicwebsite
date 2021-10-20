@@ -50,6 +50,13 @@
                     </div>
                     @endforeach
                 </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="text-center">
+                            {{$teachers->links()}}
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- Lecturers Page 1 Area End Here -->

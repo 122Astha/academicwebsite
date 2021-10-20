@@ -37,23 +37,26 @@
                                 <p>{{ $message }}</p>
                             </div>
                             @endif
+                          
+                                
                             
                                 <!-- Listed product show -->
                                 <div role="tabpanel" class="tab-pane active" id="list-view">
+                                    @foreach ($course as $courses)
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div class="courses-box3">
                                             <div class="single-item-wrapper">
                                                 <div class="courses-img-wrapper ">
-                                                    <img class="img-responsive" src="{{asset('uploads/files/'.$course->imglink)  }}" alt="courses">
+                                                    <img class="img-responsive" src="{{asset('uploads/files/'.$courses->imglink)  }}" alt="courses">
                                                     
                                                 </div>
                                                 <div class="courses-content-wrapper">
-                                                    <h3 class="item-title"><a href="{{ url('course_details/'.$course->id) }}">{{ $course->name }}</a></h3>
+                                                    <h3 class="item-title"><a href="{{ url('course_details/'.$courses->id) }}">{{ $courses->name }}</a></h3>
                                                     <p class="item-content">Rmply dummy text printing setting industry iLorem ipsum dolor sit consectetuer adipiscing elit et diam nonummy.t’s free demo.</p>
                                                     <ul class="courses-info">
-                                                        <li>{{ $course->duration }}
+                                                        <li>{{ $courses->duration }}
                                                             <br><span> Duration</span></li>
-                                                        <li>{{ $course->time }}
+                                                        <li>{{ $courses->time }}
                                                             <br><span> Time</span></li>
                                                     </ul>
 
@@ -61,7 +64,9 @@
                                             </div>
                                         </div>
                                     </div>
+                                    @endforeach
                                 </div>
+                          
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 col-md-pull-9">
@@ -70,15 +75,15 @@
                                 <div class="sidebar-box-inner">
                                     <h3 class="sidebar-title">Find your Course</h3>
                                     <div class="sidebar-find-course">
-                                        <form id="checkout-form">
+                                        <form id="checkout-form" action="{{ route('courseSearch',{{ $category->c_id }}) }}" method="GET">
                                             <div class="form-group course-name">
-                                                <input id="first-name" placeholder="Course Name" class="form-control" type="text" />
+                                                <input id="first-name" placeholder="Course Name" class="form-control" type="text"  name="search" required />
                                             </div>
                                             <div class="form-group">
                                                 <div class="custom-select">
                                                     <select id="district" class='select2'>
                                                         @foreach ($categories as $category)
-                                                        <option value="0"><a href="{{ url('courses/'.$category->c_id) }} ">{{ $category->c_name }}</a></option>
+                                                        <option value="{{ $category->c_id }}"><a href="{{ url('courses/'.$category->c_id) }} ">{{ $category->c_name }}</a></option>
                                                         @endforeach
                                                     </select>
                                                 </div>

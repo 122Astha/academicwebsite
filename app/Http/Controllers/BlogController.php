@@ -5,8 +5,27 @@ namespace App\Http\Controllers;
 use App\Models\Blog;
 use Illuminate\Http\Request;
 
+use App\Models\Coursecat;
+
+use App\Models\SiteConfig;
+
 class BlogController extends Controller
 {
+    public function search(Request $request){
+        // Get the search value from the request
+        $search = $request->input('search');
+        $sites = SiteConfig::all();
+        $categories = Coursecat::all();
+    
+        // Search in the title and body columns from the posts table
+        $blogs = Blog::query()
+            ->where('tittle', 'LIKE', "%{$search}%")
+            ->paginate(8);
+    
+        // Return the search view with the resluts compacted
+        return view('blog', compact('blogs', 'sites','categories'));
+    }
+   
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +34,7 @@ class BlogController extends Controller
     public function index()
     {
         if (session()->has('LoggedUser')) {
-             $blog=blog::all();
+             $blog=blog::paginate(3);
         return view('admin.blog.index',compact('blog'));
         }
 

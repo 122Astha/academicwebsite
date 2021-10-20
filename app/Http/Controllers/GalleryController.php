@@ -15,7 +15,7 @@ class GalleryController extends Controller
      */
     public function index()
     {
-          $gallery=Gallery::all();
+          $gallery=Gallery::paginate(8);
           $category= GalleryCategory::all();
         return view('admin.gallery.index',compact('gallery', 'category'));
     }

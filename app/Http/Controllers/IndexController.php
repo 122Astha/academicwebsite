@@ -68,7 +68,7 @@ class IndexController extends Controller
     {
          $categories = Coursecat::all();
          $sites = SiteConfig::all();
-        $notices = Notice::all();
+        $notices = Notice::paginate(4);
         return view('notice', compact('notices','sites','categories'));
     }
 
@@ -84,7 +84,7 @@ class IndexController extends Controller
 
     public function results()
     {
-        $results = Result::all();
+        $results = Result::paginate(6);
          $sites = SiteConfig::all();
           $categories = Coursecat::all();
         return view('result', compact('results','sites','categories'));
@@ -99,7 +99,8 @@ class IndexController extends Controller
         $categories = Coursecat::all();
        // return $courses;
 // $course=Course::where('c_id',$id)->get();
-$course=Course::where('c_id',$id)->first();
+// $course=Course::where('c_id',$id)->get();
+$course=Course::where('c_id',$id)->paginate(5);
  $sites = SiteConfig::all();
 
         return view('course', compact('course', 'categories','sites'));
@@ -119,7 +120,7 @@ $course=Course::where('c_id',$id)->first();
 
     public function teacher()
     {
-        $teachers = Teacher::all();
+        $teachers = Teacher::paginate(12);
  $sites = SiteConfig::all();
   $categories = Coursecat::all();
         return view('teacher', compact('teachers','sites','categories'));
@@ -137,7 +138,7 @@ $course=Course::where('c_id',$id)->first();
 
     public function news()
     {
-        $newses = News::all();
+        $newses = News::paginate(6);
  $sites = SiteConfig::all();
   $categories = Coursecat::all();
         return view('news', compact('newses','sites','categories'));
@@ -145,7 +146,7 @@ $course=Course::where('c_id',$id)->first();
 
     public function gallery()
     {
-        $galleries = Gallery::all();
+        $galleries = Gallery::paginate(12);
         $gallerycategories = GalleryCategory::all();
          $categories = Coursecat::all();
         $sites = SiteConfig::all();
@@ -155,7 +156,7 @@ $course=Course::where('c_id',$id)->first();
 
     public function event()
     {
-        $Events = Event::all();
+        $Events = Event::paginate(4);
  $sites = SiteConfig::all();
   $categories = Coursecat::all();
         return view('event', compact('Events','sites','categories'));
@@ -184,7 +185,7 @@ $course=Course::where('c_id',$id)->first();
 
     public function blog()
     {
-        $blogs = Blog::all();
+        $blogs = Blog::paginate(9);
  $sites = SiteConfig::all();
   $categories = Coursecat::all();
         return view('blog', compact('blogs','sites','categories'));

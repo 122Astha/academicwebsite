@@ -5,8 +5,26 @@ namespace App\Http\Controllers;
 use App\Models\News;
 use Illuminate\Http\Request;
 
+use App\Models\Coursecat;
+
+use App\Models\SiteConfig;
+
 class NewsController extends Controller
 {
+    public function search(Request $request){
+        // Get the search value from the request
+        $search = $request->input('search');
+        $sites = SiteConfig::all();
+        $categories = Coursecat::all();
+    
+        // Search in the title and body columns from the posts table
+        $newses = News::query()
+            ->where('title', 'LIKE', "%{$search}%")
+            ->paginate(6);
+    
+        // Return the search view with the resluts compacted
+        return view('news', compact('newses', 'sites','categories'));
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +32,7 @@ class NewsController extends Controller
      */
     public function index()
     {
-         $news=News::all();
+         $news=News::paginate(3);
         return view('admin.news.index',compact('news'));
     }
 

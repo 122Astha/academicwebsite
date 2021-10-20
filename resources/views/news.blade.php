@@ -38,14 +38,21 @@
                                     <a href="{{ url('news_details/'.$news->id) }}">
                                         <div class="news-img-holder">
                                             <img src="{{asset('uploads/files/'. $news->imglink) }}" class="img-responsive" alt="research">
-                                            <ul class="news-date2">
-                                                <li>{{ $news->date }}</li>
-                                                <li>{{ $news->time }}</li>
+                                            <ul class="news-date2 m-5" >
+                                                <li class="date" style="width:100px;">{{ $news->date }}</li>
+                                                <li style="width:100px;">{{ $news->time }}</li>
                                             </ul>
                                         </div>
                                     </a>
                                     <h3 class="title-news-left-bold"><a href="{{ url('news_details/'.$news->id) }}">{{ $news->title }}</a></h3>
                                     <p>{{ $news->text }}</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="text-center">
+                                            {{$newses->links()}}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             @endforeach
@@ -57,9 +64,9 @@
                                 <div class="sidebar-box-inner">
                                     <h3 class="sidebar-title">Search</h3>
                                     <div class="sidebar-find-course">
-                                        <form id="checkout-form">
+                                        <form id="checkout-form" action="{{ route('newsSearch') }}" method="GET">
                                             <div class="form-group course-name">
-                                                <input id="first-name" placeholder="Type Here . . .." class="form-control" type="text" />
+                                                <input id="first-name" placeholder="Type Here . . .." class="form-control" type="text" name="search" required />
                                             </div>
                                             <div class="form-group">
                                                 <button class="sidebar-search-btn-full disabled" type="submit" value="Login">Search</button>

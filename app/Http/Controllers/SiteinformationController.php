@@ -14,7 +14,7 @@ class SiteinformationController extends Controller
      */
     public function index()
     {
-        $siteinformation=Siteinformation::all();
+        $siteinformation=Siteinformation::paginate(8);
        return view('admin.siteinformation.index',compact('siteinformation'));
    }
 

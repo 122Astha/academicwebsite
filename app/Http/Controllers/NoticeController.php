@@ -5,8 +5,26 @@ namespace App\Http\Controllers;
 use App\Models\Notice;
 use Illuminate\Http\Request;
 
+use App\Models\Coursecat;
+
+use App\Models\SiteConfig;
+
 class NoticeController extends Controller
 {
+    public function search(Request $request){
+        // Get the search value from the request
+        $search = $request->input('search');
+        $sites = SiteConfig::all();
+        $categories = Coursecat::all();
+    
+        // Search in the title and body columns from the posts table
+        $notices = Notice::query()
+            ->where('heading', 'LIKE', "%{$search}%")
+            ->paginate(6);
+    
+        // Return the search view with the resluts compacted
+        return view('notice', compact('notices', 'sites','categories'));
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +32,7 @@ class NoticeController extends Controller
      */
     public function index()
     {
-         $notice=Notice::all();
+         $notice=Notice::paginate(6);
         return view('admin.notice.index',compact('notice'));
     }
 

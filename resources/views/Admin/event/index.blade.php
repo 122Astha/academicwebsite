@@ -66,9 +66,16 @@
 																		<td>{{ $events->status }}</td>
 
 																	</tr>
- @endforeach
+																 @endforeach
 																</tfoot>
 														</table>
+														<div class="row">
+															<div class="col-md-12">
+																<div class="text-center">
+																	{{$event->links()}}
+																</div>
+															</div>
+														</div>
 													</div>
 													<!-- /.card-body -->
 												</div>

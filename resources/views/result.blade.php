@@ -32,81 +32,48 @@
         <div class="event-page-area">
             <div class="container">
                 <div class="row">
+                    {{-- test --}}
                     <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
                         <div class="row event-inner-wrapper">
                             <div class="row">
+                                @foreach ($results as $result)
                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-6">
                                 <div class="single-item">
                                     
                                     <div class="item-content">
-                                        <h3 class="sidebar-title"><a href="#">WordPress  MeetUp Conference 2017</a></h3>
+                                        <h3><a href="{{ $result->link }}">{{ $result->name }}</a></h3>
                                         
                                         <ul class="event-info-block">
-                                            <li><i class="fa fa-calendar" aria-hidden="true"></i>22 December, 2016</li>
-                                            <li><i class="fa fa-map-marker" aria-hidden="true"></i>NewYork Tower, Melbourne</li>
+                                            <li><i class="fa fa-calendar" aria-hidden="true"></i><span>{{ $result->date }}</span></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-6">
-                                <div class="single-item">
-                                    
-                                    <div class="item-content">
-                                        <h3 class="sidebar-title"><a href="#">WordPress  MeetUp Conference 2017</a></h3>
-                                        
-                                        <ul class="event-info-block">
-                                            <li><i class="fa fa-calendar" aria-hidden="true"></i>22 December, 2016</li>
-                                            <li><i class="fa fa-map-marker" aria-hidden="true"></i>NewYork Tower, Melbourne</li>
-                                        </ul>
+                            @endforeach
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="text-center">
+                                        {{$results->links()}}
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-6">
-                                <div class="single-item">
-                                   
-                                    <div class="item-content">
-                                        <h3 class="sidebar-title"><a href="#">WordPress  MeetUp Conference 2017</a></h3>
-                                        
-                                        <ul class="event-info-block">
-                                            <li><i class="fa fa-calendar" aria-hidden="true"></i>22 December, 2016</li>
-                                            <li><i class="fa fa-map-marker" aria-hidden="true"></i>NewYork Tower, Melbourne</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <div class="single-item">
-                                   
-                                    <div class="item-content">
-                                        <h3 class="sidebar-title"><a href="#">WordPress  MeetUp Conference 2017</a></h3>
-                                        
-                                        <ul class="event-info-block">
-                                            <li><i class="fa fa-calendar" aria-hidden="true"></i>22 December, 2016</li>
-                                            <li><i class="fa fa-map-marker" aria-hidden="true"></i>NewYork Tower, Melbourne</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <ul class="pagination-center">
-                                    <li class="active"><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                </ul>
                             </div>
                         </div>
                     </div>
+                    {{-- test --}}
                     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
                         <div class="sidebar">
                             <div class="sidebar-box">
                                 <div class="sidebar-box-inner">
                                     <h3 class="sidebar-title">Search</h3>
                                     <div class="sidebar-find-course">
-                                        <form id="checkout-form">
+                                        {{-- <form action="{{ route('resultSearch') }}" method="GET">
+                                            <input type="text" name="search" required/>
+                                            <button type="submit">Search</button>
+                                        </form> --}}
+                                        <form id="checkout-form" action="{{ route('resultSearch') }}" method="GET">
                                             <div class="form-group course-name">
-                                                <input id="first-name" placeholder="Type Here . . .." class="form-control" type="text" />
+                                                <input id="first-name" placeholder="Type Here . . .." class="form-control" type="text" name="search" required />
                                             </div>
                                             <div class="form-group">
                                                 <button class="sidebar-search-btn-full disabled" type="submit" value="Login">Search</button>

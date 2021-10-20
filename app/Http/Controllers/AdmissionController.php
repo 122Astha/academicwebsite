@@ -16,7 +16,7 @@ class AdmissionController extends Controller
 
     public function index()
     {
-        $admission=admission::all();
+        $admission=admission::paginate(8);
         return view('admin.admission.index',compact('admission'));
     }
 

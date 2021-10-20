@@ -88,13 +88,19 @@ Route::get('/admissions','App\Http\Controllers\IndexController@admission');
 
 
 Route::get('/results','App\Http\Controllers\IndexController@results');
+Route::get('/results/search','App\Http\Controllers\ResultController@search')->name('resultSearch');
 Route::get('/notices','App\Http\Controllers\IndexController@notice');
+Route::get('/notices/search','App\Http\Controllers\NoticeController@search')->name('noticeSearch');
 Route::get('/courses/{id}','App\Http\Controllers\IndexController@course');
+Route::get('/courses/{id}/search','App\Http\Controllers\CourseController@search')->name('courseSearch');
 Route::get('/teachers','App\Http\Controllers\IndexController@teacher');
 Route::get('/newses','App\Http\Controllers\IndexController@news');
+Route::get('/newses/search','App\Http\Controllers\NewsController@search')->name('newsSearch');
 Route::get('/galleries','App\Http\Controllers\IndexController@gallery');
 Route::get('/events','App\Http\Controllers\IndexController@event');
+Route::get('/events/search','App\Http\Controllers\EventController@search')->name('eventSearch');
 Route::get('/blogs','App\Http\Controllers\IndexController@blog');
+Route::get('/blogs/search','App\Http\Controllers\BlogController@search')->name('blogSearch');
 Route::get('/notice_details/{id}','App\Http\Controllers\IndexController@notice_details');
 Route::get('/news_details/{id}','App\Http\Controllers\IndexController@news_details');
 

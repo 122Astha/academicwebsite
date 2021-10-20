@@ -4,8 +4,27 @@ namespace App\Http\Controllers;
 
 use App\Models\Event;
 use Illuminate\Http\Request;
+
+use App\Models\Coursecat;
+
+use App\Models\SiteConfig;
+
 class EventController extends Controller
 {
+    public function search(Request $request){
+        // Get the search value from the request
+        $search = $request->input('search');
+        $sites = SiteConfig::all();
+        $categories = Coursecat::all();
+    
+        // Search in the title and body columns from the posts table
+        $Events =Event::query()
+            ->where('tittle', 'LIKE', "%{$search}%")
+            ->paginate(8);
+    
+        // Return the search view with the resluts compacted
+        return view('event', compact('Events', 'sites','categories'));
+    }
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +32,7 @@ class EventController extends Controller
      */
     public function index()
     {
-        $event=Event::all();
+        $event=Event::paginate(8);
         return view('admin.event.index',compact('event'));
     }
 

@@ -49,6 +49,13 @@
                                 </div>
                             </div>
                             @endforeach
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="text-center">
+                                        {{$Events->links()}}
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
@@ -57,9 +64,9 @@
                                 <div class="sidebar-box-inner">
                                     <h3 class="sidebar-title">Search</h3>
                                     <div class="sidebar-find-course">
-                                        <form id="checkout-form">
+                                        <form id="checkout-form" action="{{ route('eventSearch') }}" method="GET">
                                             <div class="form-group course-name">
-                                                <input id="first-name" placeholder="Type Here . . .." class="form-control" type="text" />
+                                                <input id="first-name" placeholder="Type Here . . .." class="form-control" type="text" name="search" required />
                                             </div>
                                             <div class="form-group">
                                                 <button class="sidebar-search-btn-full disabled" type="submit" value="Login">Search</button>

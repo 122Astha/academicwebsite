@@ -7,8 +7,25 @@ use App\Models\Coursecat;
 use Illuminate\Http\Request;
 use App\Models\Admin_user;
 
+use App\Models\SiteConfig;
+
 class courseController extends Controller
 {
+    public function search(Request $request, $id){
+        // Get the search value from the request
+        $search = $request->input('search');
+        $category = $request->input('coursecat');
+        $sites = SiteConfig::all();
+        $categories = Coursecat::all();
+    
+        // Search in the title and body columns from the posts table
+        $course = Course::query()
+            ->where('name', 'LIKE', "%{$search}%")
+            ->paginate(8);
+    
+        // Return the search view with the resluts compacted
+        return view('course/'.$category, compact('course', 'sites','categories'));
+    }
     /**
      * Display a listing of the resource.
      *
@@ -16,7 +33,7 @@ class courseController extends Controller
      */
     public function index()
     {
-         $course=Course::all();
+         $course=Course::paginate(3);
         $coursecat=Coursecat::all();
         return view('admin.course.index',compact('course','coursecat'));
     }
