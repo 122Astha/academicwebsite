@@ -92,7 +92,9 @@ Route::get('/results/search','App\Http\Controllers\ResultController@search')->na
 Route::get('/notices','App\Http\Controllers\IndexController@notice');
 Route::get('/notices/search','App\Http\Controllers\NoticeController@search')->name('noticeSearch');
 Route::get('/courses/{id}','App\Http\Controllers\IndexController@course');
-Route::get('/courses/{id}/search','App\Http\Controllers\CourseController@search')->name('courseSearch');
+Route::get('/courses','App\Http\Controllers\CourseController@search')->name('courses');
+
+
 Route::get('/teachers','App\Http\Controllers\IndexController@teacher');
 Route::get('/newses','App\Http\Controllers\IndexController@news');
 Route::get('/newses/search','App\Http\Controllers\NewsController@search')->name('newsSearch');

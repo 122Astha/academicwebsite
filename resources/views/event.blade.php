@@ -40,7 +40,7 @@
                                     </div>
                                     <div class="item-content">
                                         <h3 class="sidebar-title"><a href="{{ url('event_details/'.$event->id) }}">{{ $event->tittle }}</a></h3>
-                                        <p>Bimply dummy text of the printing and typesetting istryrem Ipsum has been the industry's standard dummy text ever when an unknown printer.</p>
+                                        <p>{{Illuminate\Support\Str::words($event->details,20,'.....') }}</p>
                                         <ul class="event-info-block">
                                             <li><i class="fa fa-calendar" aria-hidden="true"></i>{{ $event->date }}</li>
                                             

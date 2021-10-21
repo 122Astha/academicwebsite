@@ -11,20 +11,21 @@ use App\Models\SiteConfig;
 
 class courseController extends Controller
 {
-    public function search(Request $request, $id){
+    public function search(Request $request){
         // Get the search value from the request
+        
         $search = $request->input('search');
-        $category = $request->input('coursecat');
         $sites = SiteConfig::all();
         $categories = Coursecat::all();
     
         // Search in the title and body columns from the posts table
         $course = Course::query()
             ->where('name', 'LIKE', "%{$search}%")
-            ->paginate(8);
+            ->paginate(3);
+           
     
         // Return the search view with the resluts compacted
-        return view('course/'.$category, compact('course', 'sites','categories'));
+        return view('course', compact('course', 'sites','categories'));
     }
     /**
      * Display a listing of the resource.

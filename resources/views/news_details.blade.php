@@ -27,8 +27,8 @@
                                 <div class="news-img-holder">
                                     <img src="{{ asset('uploads/files/'.$news_details->imglink) }}" class="img-responsive" alt="research">
                                     <ul class="news-date1">
-                                        <li>{{ $news_details->date}}</li>
-                                        <li>{{ $news_details->time }}</li>
+                                        <li style="width:150px;">{{ $news_details->date}}</li>
+                                        <li style="width:150px;">{{ $news_details->time }}</li>
                                     </ul>
                                 </div>
                                 <h2 class="title-default-left-bold-lowhight"><a href="#">{{ $news_details->title }}</a></h2>
@@ -41,21 +41,6 @@
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
                         <div class="sidebar">
-                            <div class="sidebar-box">
-                                <div class="sidebar-box-inner">
-                                    <h3 class="sidebar-title">Search</h3>
-                                    <div class="sidebar-find-course">
-                                        <form id="checkout-form">
-                                            <div class="form-group course-name">
-                                                <input id="first-name" placeholder="Type Here . . .." class="form-control" type="text" />
-                                            </div>
-                                            <div class="form-group">
-                                                <button class="sidebar-search-btn-full disabled" type="submit" value="Login">Search</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="sidebar-box">
                                 <div class="sidebar-box-inner">
                                     <h3 class="sidebar-title">Categories</h3>

@@ -113,7 +113,7 @@
 																			<div class="col-lg-9 col-md-9 col-sm-12">
 																				<select class="form-control" name="status">
 																					<option value="{{ $news->status }}">{{ $news->status }}</option>
-																				@if ($news->status='Active')
+																				@if ($news->status=='Active')
                                                                                     	<option >Deactive</option>
                                                                                     @else
                                                                                     <option >Active</option>

@@ -52,7 +52,7 @@
                                                 </div>
                                                 <div class="courses-content-wrapper">
                                                     <h3 class="item-title"><a href="{{ url('course_details/'.$courses->id) }}">{{ $courses->name }}</a></h3>
-                                                    <p class="item-content">{{Illuminate\Support\Str::words($courses->text,20,'.....') }}</p>
+                                                    <p class="item-content">Rmply dummy text printing setting industry iLorem ipsum dolor sit consectetuer adipiscing elit et diam nonummy.t’s free demo.</p>
                                                     <ul class="courses-info">
                                                         <li>{{ $courses->duration }}
                                                             <br><span> Duration</span></li>
@@ -75,7 +75,7 @@
                                 <div class="sidebar-box-inner">
                                     <h3 class="sidebar-title">Find your Course</h3>
                                     <div class="sidebar-find-course">
-                                        <form id="checkout-form" action="{{ route('courses') }}" method="GET">
+                                        <form id="checkout-form" action="{{ route('courseSearch') }}" method="GET">
                                             <div class="form-group course-name">
                                                 <input id="first-name" placeholder="Type Here . . .." class="form-control" type="text" name="search" required />
                                             </div>

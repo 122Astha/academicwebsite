@@ -41,7 +41,7 @@
                                 <div class="single-item">
                                     
                                     <div class="item-content">
-                                        <h3><a href="{{ $result->link }}">{{ $result->name }}</a></h3>
+                                        <h3><a href="{{ asset('uploads/files/'.$result->link )}}" download>{{ $result->name }}</a></h3>
                                         
                                         <ul class="event-info-block">
                                             <li><i class="fa fa-calendar" aria-hidden="true"></i><span>{{ $result->date }}</span></li>

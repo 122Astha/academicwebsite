@@ -39,13 +39,13 @@
                                         <div class="news-img-holder">
                                             <img src="{{asset('uploads/files/'. $news->imglink) }}" class="img-responsive" alt="research">
                                             <ul class="news-date2 m-5" >
-                                                <li class="date" style="width:100px;">{{ $news->date }}</li>
+                                                <li  style="width:100px;">{{ $news->date }}</li>
                                                 <li style="width:100px;">{{ $news->time }}</li>
                                             </ul>
                                         </div>
                                     </a>
                                     <h3 class="title-news-left-bold"><a href="{{ url('news_details/'.$news->id) }}">{{ $news->title }}</a></h3>
-                                    <p>{{ $news->text }}</p>
+                                    <p>{{Illuminate\Support\Str::words($news->text,20,'.....') }}</p>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">

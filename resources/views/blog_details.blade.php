@@ -35,21 +35,6 @@
                         <div class="sidebar">
                             <div class="sidebar-box">
                                 <div class="sidebar-box-inner">
-                                    <h3 class="sidebar-title">Search</h3>
-                                    <div class="sidebar-find-course">
-                                        <form id="checkout-form">
-                                            <div class="form-group course-name">
-                                                <input id="first-name" placeholder="Research Name" class="form-control" type="text" />
-                                            </div>
-                                            <div class="form-group">
-                                                <button class="sidebar-search-btn-full disabled" type="submit" value="Login">Search</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sidebar-box">
-                                <div class="sidebar-box-inner">
                                     <h3 class="sidebar-title">Latest Blogs</h3>
                                     <div class="sidebar-latest-research-area">
                                         <ul>

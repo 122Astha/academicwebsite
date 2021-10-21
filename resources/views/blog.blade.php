@@ -2,21 +2,19 @@
 @section('content')
 
   <!-- Inner Page Banner Area Start Here -->
-  @foreach ($sites as $site)
-  @if ($site->site_key=='bgimage')
-     <div class="inner-page-banner-area" style="background-image: url({{'uploads/files/'.$site->imglink}});">
-         @endif
-         @endforeach  
-             <div class="container">
-                 <div class="pagination-area">
-                     <h1>Blog </h1>
-                     <ul>
-                         <li><a href="{{asset('index')}}">Home</a> -</li>
-                         <li>Blog</li>
-                     </ul>
-                 </div>
-             </div>
-     </div>
+
+     <div class="inner-page-banner-area" style="background-image: url({{asset('assets/uploads/backgroundimg.jpg')}});">
+        <div class="container">
+            <div class="pagination-area">
+                <h1>Blog </h1>
+                <ul>
+                    <li><a href="{{asset('index')}}">Home</a> -</li>
+                    <li>Blog</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
 
         {{-- Blog area --}}
         <div class="research-details-page-area">
@@ -38,7 +36,7 @@
                                         <div class="research-details ml-5" style="font-size:20px; ">
                                             {{ $blog->tittle }}  </a>
                                          </div>
-                                        <p>{{$blog->text}}</p>
+                                        <p>{{Illuminate\Support\Str::words($blog->text,10,'.....') }}</p>
                                     </div>
                                 </div>
                                 @endforeach 
