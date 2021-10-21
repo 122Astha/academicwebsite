@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Oct 19, 2021 at 08:42 AM
+-- Generation Time: Oct 21, 2021 at 04:08 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -99,7 +99,8 @@ INSERT INTO `admissions` (`id`, `name`, `email`, `phone`, `address`, `skill`, `g
 (13, 'Drake Compton', 'nucuf@mailinator.com', '51', 'Laboris veritatis ul', 'C++', 'Female', '1', 'Sunt voluptate sed c', 'Active', '2021-10-18 05:31:48', '2021-10-18 05:31:48'),
 (14, 'Drake Compton', 'nucuf@mailinator.com', '51', 'Laboris veritatis ul', 'C++', 'Female', '1', 'Sunt voluptate sed c', 'Active', '2021-10-18 05:32:22', '2021-10-18 05:32:22'),
 (15, 'Cade Hammond', 'tulomyhu@mailinator.com', '47', 'Duis atque qui ipsa', 'Python', 'Male', '2', 'Doloribus sit harum', 'Deactive', '2021-10-18 05:32:30', '2021-10-18 05:32:30'),
-(16, 'Gemma Wilkinson', 'sefovosy@mailinator.com', '59', 'Quae quis nulla ipsu', 'Html/css', 'Female', '1', 'Eiusmod architecto e', 'Deactive', '2021-10-18 05:34:15', '2021-10-18 05:34:15');
+(16, 'Gemma Wilkinson', 'sefovosy@mailinator.com', '59', 'Quae quis nulla ipsu', 'Html/css', 'Female', '1', 'Eiusmod architecto e', 'Deactive', '2021-10-18 05:34:15', '2021-10-18 05:34:15'),
+(17, 'Abel Ferrell', 'nocymicyd@mailinator.com', '44', 'Nobis corrupti aut', 'Html/css', 'Female', '1', 'Voluptas qui in temp', 'Active', '2021-10-20 00:15:02', '2021-10-20 00:15:02');
 
 -- --------------------------------------------------------
 
@@ -147,7 +148,8 @@ CREATE TABLE `coursecats` (
 
 INSERT INTO `coursecats` (`c_id`, `c_name`, `c_status`, `created_at`, `updated_at`) VALUES
 (1, 'BCA', 'Active', '2021-10-04 01:08:12', '2021-10-18 01:43:09'),
-(2, 'BBA', 'Active', '2021-10-10 12:57:04', '2021-10-10 12:57:04');
+(2, 'BBA', 'Active', '2021-10-10 12:57:04', '2021-10-10 12:57:04'),
+(3, 'BPH', 'Active', '2021-10-19 01:15:26', '2021-10-19 01:15:26');
 
 -- --------------------------------------------------------
 
@@ -173,8 +175,10 @@ CREATE TABLE `courses` (
 --
 
 INSERT INTO `courses` (`id`, `name`, `text`, `time`, `duration`, `imglink`, `c_id`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Numerical Method', 'Dmply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.Dmply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.Dmply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.Dmply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.', '07:03:00', '2021-10-20', 'course1_1633888449.jpg', 1, 'Active', '2021-10-04 01:33:21', '2021-10-18 04:29:09'),
-(2, 'Accounting', 'Dmply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.Dmply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.Dmply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.Dmply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.', '00:29:00', '2021-10-20', 'course2_1633891298.jpg', 2, 'Active', '2021-10-10 12:57:50', '2021-10-18 04:29:16');
+(1, 'Numerical Method', 'Dmply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.Dmply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.Dmply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.Dmply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.', '07:03:00', '2021-10-20', 'course1_1633888449.jpg', 1, 'Active', '2021-10-04 01:33:21', '2021-10-19 01:23:20'),
+(2, 'Accounting', 'Dmply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.Dmply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.Dmply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.Dmply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.', '00:29:00', '2021-10-20', 'course2_1633891298.jpg', 2, 'Active', '2021-10-10 12:57:50', '2021-10-18 04:29:16'),
+(4, 'Anatomy and Physiology', 'Dmply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.Dmply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.Dmply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.Dmply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.', '12:49:00', '2021-10-21', 'course3_1634626955.jpg', 3, 'Active', '2021-10-19 01:18:46', '2021-10-19 01:21:17'),
+(5, 'Computer Architecture', 'Dmply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.Dmply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.Dmply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.Dmply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.', '13:56:00', '2021-10-20', 'course4_1634630859.jpg', 1, 'Active', '2021-10-19 02:23:16', '2021-10-19 02:23:34');
 
 -- --------------------------------------------------------
 
@@ -200,8 +204,8 @@ CREATE TABLE `events` (
 --
 
 INSERT INTO `events` (`id`, `tittle`, `date`, `time`, `address`, `img_link`, `details`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'WordPress MeetUp Conference 2017', '2021-09-30', '11:12', 'pokhara', 'event1_1633938070.jpg', 'Bimply dummy text of the printing and typesetting istryrem Ipsum has been the industry\'s standard dummy text ever when an unknown printer.', 'Active', '2021-09-28 23:37:22', '2021-10-11 01:56:25'),
-(2, 'WordPress MeetUp Conference 2021', '1998-09-14', '15:09', 'Velit reprehenderit', 'event2_1633938173.jpg', 'Cum nisi occaecat cu', 'Active', '2021-10-11 01:59:10', '2021-10-11 01:59:24');
+(1, 'WordPress MeetUp Conference 2017', '2021-09-30', '11:12', 'pokhara', 'event1_1633938070.jpg', 'Bimply dummytext of the printing and typesetting istryrem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer.when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchangedwhen an unknown printer took a galley of type and scrambled.when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged Bimply dummy text of the printing and typesetting istryrem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer.when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.', 'Active', '2021-09-28 23:37:22', '2021-10-20 05:20:22'),
+(2, 'WordPress MeetUp Conference 2021', '1998-09-14', '15:09', 'Velit reprehenderit', 'event2_1633938173.jpg', 'Bimply dummytext of the printing and typesetting istryrem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer.when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchangedwhen an unknown printer took a galley of type and scrambled.when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged Bimply dummy text of the printing and typesetting istryrem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer.when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.', 'Active', '2021-10-11 01:59:10', '2021-10-20 05:20:28');
 
 -- --------------------------------------------------------
 
@@ -286,7 +290,10 @@ INSERT INTO `files` (`id`, `title`, `file_link`, `extension`, `details`, `status
 (42, 'gallery 3', 'gallery3_1634534460.jpg', 'jpg', NULL, 1, '2021-10-17 23:36:00', '2021-10-17 23:39:46', '2021-10-17 23:39:46'),
 (43, 'gallery 3', 'gallery3_1634534700.jpg', 'jpg', NULL, 1, '2021-10-17 23:40:00', '2021-10-17 23:40:00', NULL),
 (44, 'course 3', 'course3_1634550691.jpg', 'jpg', NULL, 1, '2021-10-18 04:06:31', '2021-10-18 04:06:31', NULL),
-(45, 'blog 3', 'blog3_1634624709.jpg', 'jpg', NULL, 1, '2021-10-19 00:40:09', '2021-10-19 00:40:09', NULL);
+(45, 'blog 3', 'blog3_1634624709.jpg', 'jpg', NULL, 1, '2021-10-19 00:40:09', '2021-10-19 00:40:09', NULL),
+(46, 'course 3', 'course3_1634626955.jpg', 'jpg', NULL, 1, '2021-10-19 01:17:35', '2021-10-19 01:17:35', NULL),
+(47, 'course 4', 'course4_1634630859.jpg', 'jpg', NULL, 1, '2021-10-19 02:22:39', '2021-10-19 02:22:39', NULL),
+(48, 'result', 'result_1634725439.pdf', 'pdf', NULL, 1, '2021-10-20 04:38:59', '2021-10-20 04:38:59', NULL);
 
 -- --------------------------------------------------------
 
@@ -436,7 +443,7 @@ CREATE TABLE `news` (
 
 INSERT INTO `news` (`id`, `title`, `text`, `date`, `time`, `location`, `details`, `status`, `created_at`, `updated_at`, `imglink`) VALUES
 (2, 'How To Build HTML To WordPress Site?', 'Bimply dummy text of the printing and typesetting istryrem Ipsum has been the industry\'s standard dummy text ever when an unknown printer.', '2021-10-21', '14:54:00', 'Cumque velit exercit', 'Bimply dummy text of the printing and typesetting istryrem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer.when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuriesp into electronic.simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'Active', '2021-10-11 03:24:22', '2021-10-11 03:24:22', 'news1_1633943273.jpg'),
-(3, 'The Printing And Typesetting Industry', 'The Printing And Typesetting Industry', '2021-10-08', '14:01:00', 'pokhara', 'Bimply dummy text of the printing and typesetting istryrem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer.when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuriesp into electronic.simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'Deactive', '2021-10-11 03:28:31', '2021-10-17 11:58:22', 'news2_1633943568.jpg');
+(3, 'The Printing And Typesetting Industry', 'Bimply dummy text of the printing and typesetting istryrem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer.when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuriesp into electronic.simply dummy text of the printing and typesetting industry.', '2021-10-08', '14:01:00', 'pokhara', 'Bimply dummy text of the printing and typesetting istryrem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer.when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuriesp into electronic.simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'Active', '2021-10-11 03:28:31', '2021-10-20 05:23:13', 'news2_1633943568.jpg');
 
 -- --------------------------------------------------------
 
@@ -515,7 +522,9 @@ CREATE TABLE `results` (
 --
 
 INSERT INTO `results` (`id`, `name`, `date`, `link`, `status`, `created_at`, `updated_at`) VALUES
-(4, 'Examination', '2021-09-21', 'https://groups.google.com/g/livro-laravel/c/3mvLCEsQY-U?pli=1', 'Deactive', '2021-09-26 03:54:36', '2021-09-26 03:55:16');
+(4, 'Numerical method Result', '2021-09-21', 'result_1634725439.pdf', 'Active', '2021-09-26 03:54:36', '2021-10-20 04:39:12'),
+(5, 'Anatomy and Physiology Result', '1999-10-27', 'http://127.0.0.1:8001/results', 'Active', '2021-10-20 00:57:46', '2021-10-20 04:16:31'),
+(6, 'Computer Architecture Result', '2008-01-21', 'In sint quasi conseq', 'Active', '2021-10-20 00:58:03', '2021-10-20 04:15:08');
 
 -- --------------------------------------------------------
 
@@ -661,6 +670,16 @@ INSERT INTO `teachers` (`id`, `name`, `post`, `img_link`, `details`, `experience
 (7, 'Alina Gurung', 'Dolor ut molestiae v', 'teacher5_1633926992.jpg', 'Cupiditate odit nece', 'Nisi vel sunt quia v', 'alina@gmail.com', '9803374657', 'Active', '2021-10-10 22:51:48', '2021-10-18 00:13:21'),
 (8, 'Sunita Thapa', 'Voluptatum et animi', 'teacher6_1633927023.jpg', 'Mollit dolores rem t', 'Excepturi tempora es', 'sunita@gmail.com', '9804465836', 'Active', '2021-10-10 22:52:18', '2021-10-18 00:13:41'),
 (9, 'Ritika lama', 'Quaerat incidunt nu', 'teacher7_1633927061.jpg', 'Dolore est vitae sap', 'Aliquam natus facili', 'ritika@gmail.com', '9804465836', 'Active', '2021-10-10 22:52:54', '2021-10-18 00:14:08');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `test`
+--
+
+CREATE TABLE `test` (
+  `name` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -840,6 +859,12 @@ ALTER TABLE `teachers`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `test`
+--
+ALTER TABLE `test`
+  ADD PRIMARY KEY (`name`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -872,7 +897,7 @@ ALTER TABLE `admins_user`
 -- AUTO_INCREMENT for table `admissions`
 --
 ALTER TABLE `admissions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `blogs`
@@ -884,13 +909,13 @@ ALTER TABLE `blogs`
 -- AUTO_INCREMENT for table `coursecats`
 --
 ALTER TABLE `coursecats`
-  MODIFY `c_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `c_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `courses`
 --
 ALTER TABLE `courses`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `events`
@@ -908,7 +933,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `files`
 --
 ALTER TABLE `files`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT for table `galleries`
@@ -956,7 +981,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `results`
 --
 ALTER TABLE `results`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `siteconfigs`
@@ -981,6 +1006,12 @@ ALTER TABLE `sliders`
 --
 ALTER TABLE `teachers`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `test`
+--
+ALTER TABLE `test`
+  MODIFY `name` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `users`
