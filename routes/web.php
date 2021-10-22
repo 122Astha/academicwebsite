@@ -55,7 +55,7 @@ Route::post('/admission', 'App\Http\Controllers\AdmissionController@index')->mid
 
 Route::resource('galleryCategory', GalleryCategoryController::class)->middleware('AuthCheck');
 Route::resource('gallery', GalleryController::class)->middleware('AuthCheck');
-Route::resource('message', MessageController::class)->middleware('AuthCheck');
+Route::resource('message', MessageController::class);
 Route::resource('news', NewsController::class)->middleware('AuthCheck');
 Route::resource('result', ResultController::class)->middleware('AuthCheck');
 Route::resource('teacher', TeacherController::class)->middleware('AuthCheck');
@@ -68,7 +68,7 @@ Route::resource('whychooseus', WhychooseusController::class)->middleware('AuthCh
 Route::resource('files', FileController::class)->middleware('AuthCheck');
 Route::resource('course', CourseController::class)->middleware('AuthCheck');
 Route::resource('coursecat', CoursecatController::class)->middleware('AuthCheck');
-Route::resource('admission', AdmissionController::class)->middleware('AuthCheck');
+Route::resource('admission', AdmissionController::class);
 Route::resource('siteinformation', siteinformationController::class)->middleware('AuthCheck');
 
 Route::get('/', function () {

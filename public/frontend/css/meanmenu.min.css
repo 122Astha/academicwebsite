@@ -4,7 +4,7 @@ a.meanmenu-reveal{display:none}
   float: left;
   min-height: 42px;
   padding: 0;
-  position: fixed;
+  /* position: fixed; */
   width: 100%;
   z-index: 999999;
 }

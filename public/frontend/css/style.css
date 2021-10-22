@@ -2659,6 +2659,7 @@ nav#desktop-nav li.has-child-menu:hover ul.thired-level {
 .mean-container .mean-bar {
   float: none;
 }
+
 @media only screen and (max-width: 767px) {
   .mean-container .mean-bar a {
     padding: 6px 16px;
