@@ -46,6 +46,7 @@ class WhyChooseUsController extends Controller
        $whychooseus=new WhyChooseUs([
            'heading'=>$request->get('heading'),
              'text'=>$request->get('text'),
+             'imglink'=>$request->get('imglink'),
                  'status'=>$request->get('status'),
        ]);
        $whychooseus->save();

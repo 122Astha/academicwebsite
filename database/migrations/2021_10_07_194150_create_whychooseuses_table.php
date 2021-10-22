@@ -18,6 +18,7 @@ class CreateWhychooseusesTable extends Migration
              $table->string('heading');
             $table->text('text');
             $table->string('status');
+            $table->text('imglink');
             $table->timestamps();
         });
     }

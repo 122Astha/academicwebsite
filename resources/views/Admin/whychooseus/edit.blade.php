@@ -79,6 +79,12 @@
 
                                                         </div>
                                                     </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-xl-3 col-lg-3 col-form-label">whychoose imglink:</label>
+                                                        <div class="col-lg-9 col-xl-9">
+                                                            <input class="form-control form-control-solid form-control-lg" name="imglink" type="text" value="{{$whychooseu->imglink}}" />
+                                                        </div>
+                                                    </div>
                                                     <!--end::Group-->
                                                     <!--begin::Group-->
 													<div class="form-group row">
@@ -86,7 +92,7 @@
 														<div class="col-lg-9 col-md-9 col-sm-12">
 															<select class="form-control" name="status">
 																<option value="{{ $whychooseu->status }}">{{ $whychooseu->status }}</option>
-														@if ($whychooseu->status='Active')
+														@if ($whychooseu->status=='Active')
 																	<option >Deactive</option>
 																@else
 																<option>Active</option>

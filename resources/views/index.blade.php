@@ -51,7 +51,7 @@
           <div class="video-content">
               <h2 class="video-title">{{ $site->site_key }}</h2>
               <p class="video-sub-title">{{ $site->site_value}}</p>
-              <a class="play-btn popup-youtube wow bounceInUp" data-wow-duration="2s" data-wow-delay=".1s" href="http://www.youtube.com/watch?v=1iIZeIy7TqM"><i class="fa fa-play" aria-hidden="true"></i></a>
+              <a class="play-btn popup-youtube wow bounceInUp" data-wow-duration="2s" data-wow-delay=".1s" href="{{ $site->imglink }}"><i class="fa fa-play" aria-hidden="true"></i></a>
           </div>
           @endif
           @endforeach
@@ -67,17 +67,11 @@
               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                   <h2 class="title-default-left">{{ $whychooseuses->heading }}</h2>
                   <p>{{ $whychooseuses->text }}</p>
-                  {{-- <ul>
-                      <li><a href="#">Materiality & Interpretation</a></li>
-                      <li><a href="#">Design Management and Cultural Enterprise</a></li>
-                      <li><a href="#">Experience Design (XD)</a></li>
-                      <li><a href="#">Sound Design; Social Media and SEO</a></li>
-                  </ul> --}}
               </div>
               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                   <div class="video-area2 overlay-video bg-common-style video-margin-top" style="background-image: url('frontend/img/banner/6.jpg');">
                       <div class="video-content">
-                          <a class="play-btn popup-youtube" href="http://www.youtube.com/watch?v=1iIZeIy7TqM"><i class="fa fa-play" aria-hidden="true"></i></a>
+                          <a class="play-btn popup-youtube" href="{{ $whychooseuses->imglink }}"><i class="fa fa-play" aria-hidden="true"></i></a>
                       </div>
                   </div>
               </div>
@@ -105,62 +99,6 @@
  <!-- Counter Area End Here -->
   
 
-  <!-- News and Event Area Start Here -->
-  {{-- <div class="news-event-area">
-      <div class="container">
-          <div class="row">
-              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 news-inner-area">
-                  <h2 class="title-default-left">Latest News</h2>
-                  @foreach ($newses as $news)
-                  <ul class="news-wrapper">
-                      <li>
-                       
-                          <div class="news-img-holder ">
-                              <a href="#"><img src="{{ asset('uploads/files/'.$news->imglink) }}"  class="img-responsive" alt="news"></a>
-                          </div>
-                          <div class="news-content-holder ml-5">
-                              <h3><a href="single-news.html">{{ $news->title }}</a></h3>
-                              <div class="post-date">{{ $news->date }}</div>
-                              <p>{{ $news->text }}</p>
-                          </div>
-                      </li>
-                  </ul>
-                  @endforeach
-                  <div class="news-btn-holder">
-                      <a href="{{ url('news_details/'.$news->id) }}" class="view-all-accent-btn">View All</a>
-                  </div>
-              </div>
-              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 event-inner-area">
-                  <h2 class="title-default-left">Upcoming Events</h2>
-                  @foreach ($events as $event)
-                  <ul class="event-wrapper">
-                      <li class="wow bounceInUp" data-wow-duration="2s" data-wow-delay=".1s">
-                          <div class="event-calender-wrapper">
-                              <div class="event-calender-holder">
-                                  <h3>{{$event->date}}</h3>
-                                  <span>{{$event->time}}</span>
-                              </div>
-                          </div>
-                          <div class="event-content-holder">
-                              <h3><a href="single-event.html">{{ $event->tittle }}</a></h3>
-                              <p>{{$event->details}}</p>
-                              <ul>
-                                  <li>{{$event->date}}</li>
-                                  <li>{{$event->address}}</li>
-                              </ul>
-                          </div>
-                      </li>
-                  </ul>
-                  <br>
-                  @endforeach
-                  <div class="event-btn-holder">
-                      <a href="{{ url('event_details/'.$event->id) }}" class="view-all-primary-btn">View All</a>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div> --}}
-  <!-- News and Event Area End Here -->
   <div class="news-event-area">
     <div class="container">
         <div class="row">
@@ -175,7 +113,7 @@
                         <div class="news-content-holder">
                             <h3><a href="single-news.html">{{ $news->title }}</a></h3>
                             <div class="post-date">{{ $news->date }}</div>
-                            <p>{{ $news->text }}</p>
+                            <p>{{Illuminate\Support\Str::words($news->text,30,'.....') }}</p>
                         </div>
                     </li>
                     @endforeach
@@ -197,7 +135,7 @@
                         </div>
                         <div class="event-content-holder">
                             <h3><a href="single-event.html">{{ $event->tittle }}</a></h3>
-                            <p>{{$event->details}}</p>
+                            <p>{{Illuminate\Support\Str::words($event->details,20,'.....') }}</p>
                             <ul>
                                 <li>{{$event->date}}</li>
                                 <li>{{$event->address}}</li>

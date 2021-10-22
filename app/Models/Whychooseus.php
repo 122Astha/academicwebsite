@@ -10,6 +10,6 @@ class Whychooseus extends Model
    use HasFactory;
      protected $table = "whychooseuses";
       protected $fillable=(
-        [ 'heading', 'text', 'status']
+        [ 'heading', 'text','imglink', 'status']
     );
 }

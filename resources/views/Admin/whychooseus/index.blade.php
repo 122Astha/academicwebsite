@@ -33,6 +33,7 @@
 																	<th>Action</th>
 																	<th>whychooseus Heading</th>
 																	<th>whychooseus Text</th>
+																	<th>whychooseus Imglink</th>
 																	<th>Status</th>
 																</tr>
 															</thead>
@@ -53,6 +54,7 @@
 																		</td>
 																		<td>{{ $whychooseuses->heading }}</td>
 																		<td>{{ $whychooseuses->text }}</td>
+																		<td>{{ $whychooseuses->imglink }}</td>
 																		<td>{{ $whychooseuses->status }}</td>
 
 																	</tr>
