@@ -119,7 +119,7 @@
                     @endforeach
                 </ul>
                 <div class="news-btn-holder">
-                    <a href="#" class="view-all-accent-btn">View All</a>
+                    <a href="{{ url('newses/') }}" class="view-all-accent-btn">View All</a>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 event-inner-area">
@@ -146,7 +146,7 @@
                 <br>
                 @endforeach
                 <div class="event-btn-holder">
-                    <a href="{{ url('event_details/'.$event->id) }}" class="view-all-primary-btn">View All</a>
+                    <a href="{{ url('events/') }}" class="view-all-primary-btn">View All</a>
                 </div>
             </div>
         </div>

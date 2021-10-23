@@ -120,7 +120,7 @@ $course=Course::where('c_id',$id)->paginate(5);
 
     public function teacher()
     {
-        $teachers = Teacher::paginate(12);
+        $teachers = Teacher::paginate(8);
  $sites = SiteConfig::all();
   $categories = Coursecat::all();
         return view('teacher', compact('teachers','sites','categories'));

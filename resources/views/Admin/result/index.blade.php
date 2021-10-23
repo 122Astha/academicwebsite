@@ -33,7 +33,6 @@
 																	<th>Action</th>
 																	<th>Result Title</th>
 																	<th>Result Date</th>
-
 																	<th>Result link</th>
 																	<th>Status</th>
 																</tr>

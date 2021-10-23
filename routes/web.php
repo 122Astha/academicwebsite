@@ -20,7 +20,9 @@ use App\Http\Controllers\SiteinformationController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\WhychooseusController;
 use App\Http\Controllers\IndexController;
+
 use App\Http\Middleware\AuthCheck;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -51,6 +53,9 @@ Route::get('/register', 'App\Http\Controllers\LoginController@register')->name('
 Route::get('/admin/dashboard', 'App\Http\Controllers\LoginController@dashboard')->middleware('AuthCheck');
 Route::post('/message', 'App\Http\Controllers\MessageController@index')->middleware('Authcheck');
 Route::post('/admission', 'App\Http\Controllers\AdmissionController@index')->middleware('AuthCheck');
+
+Route::get('/register/index', 'App\Http\Controllers\LoginController@index');
+Route::delete('/register/destroy/{admin}', 'App\Http\Controllers\LoginController@destroy');
 
 
 Route::resource('galleryCategory', GalleryCategoryController::class)->middleware('AuthCheck');
