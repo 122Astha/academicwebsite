@@ -58,24 +58,24 @@ class courseController extends Controller
     public function store(Request $request)
     {
          $request->validate(([
-            'name'=>'required',
-              'text'=>'required',
-               'time'=>'required',
-               'duration'=>'required',
-               'imglink'=>'required',
-                  'status'=>'required',
-                  'c_id'=>'required',
+        'name'=>'required',
+        'text'=>'required',
+        'time'=>'required',
+        'duration'=>'required',
+        'imglink'=>'required',
+        'status'=>'required',
+        'c_id'=>'required',
 
         ]));
 
         $course=new course([
-            'name'=>$request->get('name'),
-              'text'=>$request->get('text'),
-              'time'=>$request->get('time'),
-               'duration'=>$request->get('duration'),
-               'imglink'=>$request->get('imglink'),
-                  'status'=>$request->get('status'),
-                   'c_id'=>$request->get('c_id'),
+        'name'=>$request->get('name'),
+        'text'=>$request->get('text'),
+        'time'=>$request->get('time'),
+        'duration'=>$request->get('duration'),
+        'imglink'=>$request->get('imglink'),
+        'status'=>$request->get('status'),
+        'c_id'=>$request->get('c_id'),
         ]);
         $course->save();
         return redirect()->route('course.index')->with('success','course added successfully');
@@ -116,10 +116,10 @@ class courseController extends Controller
         $request->validate([
             'name'=>'required',
             'text'=>'required',
-             'time'=>'required',
-             'duration'=>'required',
-             'imglink'=>'required',
-                'status'=>'required',
+            'time'=>'required',
+            'duration'=>'required',
+            'imglink'=>'required',
+            'status'=>'required',
 
         ]);
         $course->update($request->all());

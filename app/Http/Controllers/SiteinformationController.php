@@ -37,16 +37,16 @@ class SiteinformationController extends Controller
     public function store(Request $request)
     {
          $request->validate(([
-              'site_key'=>'required',
-               'site_details'=>'required',
-                  'status'=>'required',
+            'site_key'=>'required',
+            'site_details'=>'required',
+            'status'=>'required',
 
         ]));
 
         $siteinformation=new siteinformation([
-              'site_key'=>$request->get('site_key'),
-               'site_details'=>$request->get('site_details'),
-                  'status'=>$request->get('status'),
+            'site_key'=>$request->get('site_key'),
+            'site_details'=>$request->get('site_details'),
+            'status'=>$request->get('status'),
         ]);
         $siteinformation->save();
         return redirect()->route('siteinformation.index')->with('success','siteinformation added successfully');

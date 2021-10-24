@@ -57,21 +57,21 @@ class NoticeController extends Controller
     {
          $request->validate(([
             'heading'=>'required',
-              'date'=>'required',
-               'detail'=>'required',
-               'started'=>'required',
-               'ended'=>'required',
-                  'status'=>'required',
+            'date'=>'required',
+            'detail'=>'required',
+            'started'=>'required',
+            'ended'=>'required',
+            'status'=>'required',
 
         ]));
 
         $notice=new notice([
             'heading'=>$request->get('heading'),
-              'date'=>$request->get('date'),
-               'detail'=>$request->get('detail'),
-               'started'=>$request->get('started'),
-               'ended'=>$request->get('ended'),
-                  'status'=>$request->get('status'),
+            'date'=>$request->get('date'),
+            'detail'=>$request->get('detail'),
+            'started'=>$request->get('started'),
+            'ended'=>$request->get('ended'),
+            'status'=>$request->get('status'),
         ]);
         $notice->save();
         return redirect()->route('notice.index')->with('success','notice added successfully');

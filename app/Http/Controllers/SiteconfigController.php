@@ -38,19 +38,19 @@ class SiteconfigController extends Controller
     {
          $request->validate(([
             'site_name'=>'required',
-              'site_key'=>'required',
-               'site_value'=>'required',
-                  'status'=>'required',
+            'site_key'=>'required',
+            'site_value'=>'required',
+            'status'=>'required',
 
         ]));
 
         $siteconfig=new siteconfig([
             'site_name'=>$request->get('site_name'),
-              'site_key'=>$request->get('site_key'),
-               'site_value'=>$request->get('site_value'),
-               'imglink'=>$request->get('imglink'),
-               'details'=>$request->get('details'),
-                  'status'=>$request->get('status'),
+            'site_key'=>$request->get('site_key'),
+            'site_value'=>$request->get('site_value'),
+            'imglink'=>$request->get('imglink'),
+            'details'=>$request->get('details'),
+            'status'=>$request->get('status'),
         ]);
         $siteconfig->save();
         return redirect()->route('siteconfig.index')->with('success','siteconfig added successfully');
@@ -91,7 +91,7 @@ class SiteconfigController extends Controller
               'site_name'=>'required',
               'site_key'=>'required',
                'site_value'=>'required',
-                  'status'=>'required',
+                'status'=>'required',
 
         ]);
         $siteconfig->update($request->all());

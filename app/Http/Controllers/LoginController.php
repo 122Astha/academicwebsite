@@ -26,8 +26,8 @@ class LoginController extends Controller
       public function save(Request $request){
         $request->validate([
             'name'=>'required',
-             'email'=>'required|email',
-              'password'=>'required|min:5|max:15',
+            'email'=>'required|email',
+            'password'=>'required|min:5|max:15',
         ]);
 
         // inserting data in databse

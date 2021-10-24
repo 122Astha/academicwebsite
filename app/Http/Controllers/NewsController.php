@@ -57,25 +57,25 @@ class NewsController extends Controller
     {
         $request->validate(([
             'title'=>'required',
-             'text'=>'required',
-              'date'=>'required',
-               'time'=>'required',
-                'location'=>'required',
-                 'details'=>'required',
-                  'status'=>'required',
-                     'imglink'=>'required',
+            'text'=>'required',
+            'date'=>'required',
+            'time'=>'required',
+            'location'=>'required',
+            'details'=>'required',
+            'status'=>'required',
+            'imglink'=>'required',
 
         ]));
 
         $news=new News([
             'title'=>$request->get('title'),
-             'text'=>$request->get('text'),
-              'date'=>$request->get('date'),
-               'time'=>$request->get('time'),
-                'location'=>$request->get('location'),
-                 'details'=>$request->get('details'),
-                  'status'=>$request->get('status'),
-                   'imglink'=>$request->get('imglink'),
+            'text'=>$request->get('text'),
+            'date'=>$request->get('date'),
+            'time'=>$request->get('time'),
+            'location'=>$request->get('location'),
+            'details'=>$request->get('details'),
+            'status'=>$request->get('status'),
+            'imglink'=>$request->get('imglink'),
         ]);
         $news->save();
         return redirect('news')->with('success','News added successfully');
@@ -115,14 +115,14 @@ class NewsController extends Controller
     public function update(Request $request, News $news)
     {
         $request->validate([
-               'title'=>'required',
-             'text'=>'required',
-              'date'=>'required',
-               'time'=>'required',
-                'location'=>'required',
-                 'details'=>'required',
-                  'status'=>'required',
-                  'imglink'=>'required',
+            'title'=>'required',
+            'text'=>'required',
+            'date'=>'required',
+            'time'=>'required',
+            'location'=>'required',
+            'details'=>'required',
+            'status'=>'required',
+            'imglink'=>'required',
 
 
         ]);

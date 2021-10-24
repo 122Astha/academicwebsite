@@ -37,28 +37,28 @@ class TeacherController extends Controller
     public function store(Request $request)
     {
         $request->validate(([
-             'name'=>'required',
-             'post'=>'required',
-              'img_link'=>'required',
-               'details'=>'required',
-                'experience'=>'required',
-                 'address'=>'required',
-                  'contact'=>'required',
-                  'status'=>'required',
+            'name'=>'required',
+            'post'=>'required',
+            'img_link'=>'required',
+            'details'=>'required',
+            'experience'=>'required',
+            'address'=>'required',
+            'contact'=>'required',
+            'status'=>'required',
 
         ]));
 
         $teacher=new Teacher([
             'name'=>$request->get('name'),
 
-              'post'=>$request->get('post'),
-               'img_link'=>$request->get('img_link'),
-               'details'=>$request->get('details'),
-               'experience'=>$request->get('experience'),
-               'address'=>$request->get('address'),
-               'contact'=>$request->get('contact'),
+            'post'=>$request->get('post'),
+            'img_link'=>$request->get('img_link'),
+            'details'=>$request->get('details'),
+            'experience'=>$request->get('experience'),
+            'address'=>$request->get('address'),
+            'contact'=>$request->get('contact'),
 
-                  'status'=>$request->get('status'),
+            'status'=>$request->get('status'),
         ]);
         $teacher->save();
        return redirect()->route('teacher.index')->with('sucess','Teacher success successfully');

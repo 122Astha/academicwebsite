@@ -37,26 +37,26 @@ class SliderController extends Controller
     {
          $request->validate(([
             'name'=>'required',
-              'header'=>'required',
-               'sub_heading'=>'required',
-               'text'=>'required',
-               'img_link'=>'required',
-               'btn'=>'required',
-               'btnlink'=>'required',
-                  'status'=>'required',
+            'header'=>'required',
+            'sub_heading'=>'required',
+            'text'=>'required',
+            'img_link'=>'required',
+            'btn'=>'required',
+            'btnlink'=>'required',
+            'status'=>'required',
 
         ]));
 
         $slider=new slider([
             'name'=>$request->get('name'),
 
-              'header'=>$request->get('header'),
-               'sub_heading'=>$request->get('sub_heading'),
-               'text'=>$request->get('text'),
-               'img_link'=>$request->get('img_link'),
-               'btn'=>$request->get('btn'),
-               'btnlink'=>$request->get('btnlink'),
-                  'status'=>$request->get('status'),
+            'header'=>$request->get('header'),
+            'sub_heading'=>$request->get('sub_heading'),
+            'text'=>$request->get('text'),
+            'img_link'=>$request->get('img_link'),
+            'btn'=>$request->get('btn'),
+            'btnlink'=>$request->get('btnlink'),
+            'status'=>$request->get('status'),
         ]);
         $slider->save();
         return redirect()->route('slider.index')->with('success','slider added successfully');

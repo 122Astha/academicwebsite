@@ -38,10 +38,10 @@ class MessageController extends Controller
     {
          $request-> validate([
              'name' => 'required',
- 'email' => 'required',
-  'subject' => 'required',
-   'details' => 'required',
-    'contact' => 'required',
+        'email' => 'required',
+        'subject' => 'required',
+        'details' => 'required',
+        'contact' => 'required',
         ]
 
         );

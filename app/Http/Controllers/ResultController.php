@@ -57,19 +57,17 @@ class ResultController extends Controller
     {
          $request->validate(([
             'name'=>'required',
-              'date'=>'required',
-               'link'=>'required',
-                  'status'=>'required',
+            'date'=>'required',
+            'link'=>'required',
+            'status'=>'required',
 
         ]));
 
         $result=new Result([
             'name'=>$request->get('name'),
-
-              'date'=>$request->get('date'),
-               'link'=>$request->get('link'),
-
-                  'status'=>$request->get('status'),
+            'date'=>$request->get('date'),
+            'link'=>$request->get('link'),
+            'status'=>$request->get('status'),
         ]);
         $result->save();
         return redirect()->route('result.index')->with('success','Result added successfully');
@@ -107,12 +105,12 @@ class ResultController extends Controller
     public function update(Request $request, Result $result)
     {
         $request->validate([
-              'name'=>'required',
+            'name'=>'required',
 
-              'date'=>'required',
-               'link'=>'required',
+            'date'=>'required',
+            'link'=>'required',
 
-                  'status'=>'required',
+            'status'=>'required',
 
         ]);
         $result->update($request->all());

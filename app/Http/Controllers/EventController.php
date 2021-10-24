@@ -68,12 +68,12 @@ class EventController extends Controller
 
         $event=new Event([
             'tittle'=>$request->get('tittle'),
-             'date'=>$request->get('date'),
-               'time'=>$request->get('time'),
-               'address'=>$request->get('address'),
-               'img_link'=>$request->get('img_link'),
-               'details'=>$request->get('details'),
-                  'status'=>$request->get('status'),
+            'date'=>$request->get('date'),
+            'time'=>$request->get('time'),
+            'address'=>$request->get('address'),
+            'img_link'=>$request->get('img_link'),
+            'details'=>$request->get('details'),
+            'status'=>$request->get('status'),
         ]);
         $event->save();
         return redirect()->route('event.index')->with('success','Event added successfully');
