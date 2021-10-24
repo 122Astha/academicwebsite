@@ -71,7 +71,7 @@
 																			<div class="col-lg-9 col-md-9 col-sm-12">
 																				<select class="form-control" name="c_status">
 																					<option value="{{ $coursecat->c_status }}">{{ $coursecat->c_status }}</option>
-																			@if ($coursecat->c_status='Active')
+																			@if ($coursecat->c_status=='Active')
                                                                                     	<option >Deactive</option>
                                                                                     @else
                                                                                     <option >Active</option>

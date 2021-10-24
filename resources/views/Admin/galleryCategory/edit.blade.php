@@ -66,7 +66,7 @@
 																			<div class="col-lg-9 col-md-9 col-sm-12">
 																				<select class="form-control" name="g_status">
 																						<option value="{{ $galleryCategory->g_status }}">{{ $galleryCategory->g_status }}</option>
-																			@if ($galleryCategory->g_status='Active')
+																			@if ($galleryCategory->g_status=='Active')
                                                                                     	<option >Deactive</option>
                                                                                     @else
                                                                                     <option >Active</option>
