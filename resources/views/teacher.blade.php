@@ -13,7 +13,7 @@
         <!-- Inner Page Banner Area Start Here -->
               @foreach ($sites as $site)
   @if ($site->site_key=='bgimage')
-     <div class="inner-page-banner-area" style="background-image: url({{'uploads/files/'.$site->imglink}});">
+     <div class="inner-page-banner-area" style="background-image: url({{'/uploads/files/'.$site->imglink}});">
          @endif
          @endforeach  
              <div class="container">

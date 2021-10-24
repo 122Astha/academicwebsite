@@ -61,7 +61,7 @@
 																		<td>{{ $teachers->name }}</td>
 																		<td>{{ $teachers->post }}</td>
 																		<td><img src="{{asset('uploads/files/'.$teachers->img_link)  }}" alt="" width="100"></td>
-																		<td>{{ $teachers->details }}</td>
+																		<td>{{Illuminate\Support\Str::words($teachers->details,20,'.....') }}</td>
 																		<td>{{ $teachers->experience }}</td>
 																		<td>{{ $teachers->address }}</td>
 																		<td>{{ $teachers->contact }}</td>

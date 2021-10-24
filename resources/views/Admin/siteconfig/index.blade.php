@@ -34,6 +34,7 @@
 																	<th>siteconfig key</th>
 																	<th>siteconfig value</th>
                                                                     <th>siteconfig imglink</th>
+																	<th>siteconfig details</th>
 																	<th>Status</th>
 																</tr>
 															</thead>
@@ -62,6 +63,7 @@
 																		<td>{{ $siteconfiges->site_key }}</td>
 																		<td>{{ $siteconfiges->site_value }}</td>
                                                                         <td>{{ $siteconfiges->imglink}}</td>
+																		<td>{{ $siteconfiges->details}}</td>
 																		<td>{{ $siteconfiges->status }}</td>
 
 

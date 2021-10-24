@@ -11,7 +11,7 @@
         <!-- Inner Page Banner Area Start Here -->
         @foreach ($sites as $site)
         @if ($site->site_key=='bgimage')
-           <div class="inner-page-banner-area" style="background-image: url({{'uploads/files/'.$site->imglink}});">
+           <div class="inner-page-banner-area" style="background-image: url({{'/uploads/files/'.$site->imglink}});">
                @endif
                @endforeach  
                    <div class="container">
@@ -47,7 +47,7 @@
                                         <div class="courses-box3">
                                             <div class="single-item-wrapper">
                                                 <div class="courses-img-wrapper ">
-                                                    <img class="img-responsive" src="{{asset('uploads/files/'.$courses->imglink)  }}" alt="courses">
+                                                    <img class="img-responsive" src="{{asset('/uploads/files/'.$courses->imglink)  }}" alt="courses">
                                                     
                                                 </div>
                                                 <div class="courses-content-wrapper">

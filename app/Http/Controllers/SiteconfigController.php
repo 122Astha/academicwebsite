@@ -49,6 +49,7 @@ class SiteconfigController extends Controller
               'site_key'=>$request->get('site_key'),
                'site_value'=>$request->get('site_value'),
                'imglink'=>$request->get('imglink'),
+               'details'=>$request->get('details'),
                   'status'=>$request->get('status'),
         ]);
         $siteconfig->save();

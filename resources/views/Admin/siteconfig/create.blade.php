@@ -81,6 +81,12 @@
 																					<input class="form-control form-control-solid form-control-lg" name="imglink" type="text"  />
 																				</div>
 																		</div>
+																		<div class="form-group row">
+																			<label class="col-xl-3 col-lg-3 col-form-label">Site Details</label>
+																			<div class="col-lg-9 col-xl-9">
+																				<input class="form-control form-control-solid form-control-lg" name="details" type="text"  />
+																			</div>
+																		</div>
 																		<!--end::Wizard Step 2-->
 																		<!--begin::Group-->
 																		<div class="form-group row">

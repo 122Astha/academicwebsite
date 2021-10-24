@@ -10,6 +10,6 @@ class Siteconfig extends Model
     use HasFactory;
      protected $table = "siteconfigs";
       protected $fillable=(
-        [ 'site_key', 'site_value', 'site_name', 'status','imglink']
+        [ 'site_key', 'site_value', 'site_name','details', 'status','imglink']
     );
 }

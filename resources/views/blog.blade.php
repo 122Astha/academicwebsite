@@ -3,7 +3,7 @@
 
   <!-- Inner Page Banner Area Start Here -->
 
-     <div class="inner-page-banner-area" style="background-image: url({{asset('assets/uploads/backgroundimg.jpg')}});">
+     <div class="inner-page-banner-area" style="background-image: url({{asset('/assets/uploads/backgroundimg.jpg')}});">
         <div class="container">
             <div class="pagination-area">
                 <h1>Blog </h1>

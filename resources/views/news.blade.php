@@ -6,7 +6,7 @@
  <!-- Inner Page Banner Area Start Here -->
  @foreach ($sites as $site)
  @if ($site->site_key=='bgimage')
-    <div class="inner-page-banner-area" style="background-image: url({{'uploads/files/'.$site->imglink}});">
+    <div class="inner-page-banner-area" style="background-image: url({{'/uploads/files/'.$site->imglink}});">
         @endif
         @endforeach  
             <div class="container">
@@ -37,7 +37,7 @@
                                 <div class="news-box">
                                     <a href="{{ url('news_details/'.$news->id) }}">
                                         <div class="news-img-holder">
-                                            <img src="{{asset('uploads/files/'. $news->imglink) }}" class="img-responsive" alt="research">
+                                            <img src="{{asset('/uploads/files/'. $news->imglink) }}" class="img-responsive" alt="research">
                                             <ul class="news-date2 m-5" >
                                                 <li  style="width:100px;">{{ $news->date }}</li>
                                                 <li style="width:100px;">{{ $news->time }}</li>

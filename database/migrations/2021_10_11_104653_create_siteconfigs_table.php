@@ -19,6 +19,7 @@ class CreateSiteconfigsTable extends Migration
             $table->text('site_value');
              $table->string('site_name');
              $table->string('imglink');
+             $table->string('details');
              $table->string('status',50);
             $table->timestamps();
         });

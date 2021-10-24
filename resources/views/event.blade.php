@@ -6,7 +6,7 @@
    <!-- Inner Page Banner Area Start Here -->
    @foreach ($sites as $site)
    @if ($site->site_key=='bgimage')
-      <div class="inner-page-banner-area" style="background-image: url({{'uploads/files/'.$site->imglink}});">
+      <div class="inner-page-banner-area" style="background-image: url({{'/uploads/files/'.$site->imglink}});">
           @endif
           @endforeach  
               <div class="container">
@@ -36,7 +36,7 @@
                             <div class="col-lg-12 col-md-6 col-sm-12 col-xs-6">
                                 <div class="single-item">
                                     <div class="item-img">
-                                        <a href="#"><img src="{{asset('uploads/files/'.$event->img_link)  }}" alt="event" class="img-responsive"></a>
+                                        <a href="#"><img src="{{asset('/uploads/files/'.$event->img_link)  }}" alt="event" class="img-responsive"></a>
                                     </div>
                                     <div class="item-content">
                                         <h3 class="sidebar-title"><a href="{{ url('event_details/'.$event->id) }}">{{ $event->tittle }}</a></h3>

@@ -5,7 +5,7 @@
     <div class="bend niceties preview-1">
         <div id="ensign-nivoslider-3" class="slides">
             @foreach($sliders as $slider)
-            <img src="{{ asset('uploads/files/'.$slider->img_link)}}" alt="slider" title="#slider-direction-1" />
+            <img src="{{ asset('/uploads/files/'.$slider->img_link)}}" alt="slider" title="#slider-direction-1" />
              @endforeach
         </div>
         @foreach($sliders as $slider)
