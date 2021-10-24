@@ -47,20 +47,22 @@ Route::get('/auth/logout', 'App\Http\Controllers\LoginController@logout')->name(
 
 
     Route::get('/login', [LoginController::class, 'login'])->name('auth.login');
-Route::get('/register', 'App\Http\Controllers\LoginController@register')->name('admin.register');
 
+
+
+//backend route
 
 Route::get('/admin/dashboard', 'App\Http\Controllers\LoginController@dashboard')->middleware('AuthCheck');
 Route::post('/message', 'App\Http\Controllers\MessageController@index')->middleware('Authcheck');
 Route::post('/admission', 'App\Http\Controllers\AdmissionController@index')->middleware('AuthCheck');
 
+Route::get('/register', 'App\Http\Controllers\LoginController@register')->name('admin.register');
 Route::get('/register/index', 'App\Http\Controllers\LoginController@index');
 Route::delete('/register/destroy/{admin}', 'App\Http\Controllers\LoginController@destroy');
 
 
 Route::resource('galleryCategory', GalleryCategoryController::class)->middleware('AuthCheck');
 Route::resource('gallery', GalleryController::class)->middleware('AuthCheck');
-Route::resource('message', MessageController::class);
 Route::resource('news', NewsController::class)->middleware('AuthCheck');
 Route::resource('result', ResultController::class)->middleware('AuthCheck');
 Route::resource('teacher', TeacherController::class)->middleware('AuthCheck');
@@ -73,8 +75,10 @@ Route::resource('whychooseus', WhychooseusController::class)->middleware('AuthCh
 Route::resource('files', FileController::class)->middleware('AuthCheck');
 Route::resource('course', CourseController::class)->middleware('AuthCheck');
 Route::resource('coursecat', CoursecatController::class)->middleware('AuthCheck');
-Route::resource('admission', AdmissionController::class);
 Route::resource('siteinformation', siteinformationController::class)->middleware('AuthCheck');
+
+//end of backend route
+//front end route
 
 Route::get('/', function () {
     return view('index');
@@ -88,8 +92,14 @@ Route::get('/index','App\Http\Controllers\IndexController@index');
 Route::get('/','App\Http\Controllers\IndexController@index');
 Route::get('/aboutus','App\Http\Controllers\IndexController@about_us');
 Route::get('/messages','App\Http\Controllers\IndexController@messages');
+Route::get('message', 'App\Http\Controllers\MessageController@index')->middleware('AuthCheck')->name('message.index');
+Route::post('message/store', 'App\Http\Controllers\MessageController@store')->name('message.store');
+Route::delete('message/destroy', 'App\Http\Controllers\MessageController@destroy')->name('message.destroy');
 Route::get('/planning','App\Http\Controllers\IndexController@planning');
 Route::get('/admissions','App\Http\Controllers\IndexController@admission');
+Route::get('admission', 'App\Http\Controllers\AdmissionController@index')->middleware('AuthCheck')->name('admission.index');
+Route::post('admission/store', 'App\Http\Controllers\AdmissionController@store')->name('admission.store');
+Route::delete('admission/destroy', 'App\Http\Controllers\AdmissionController@destroy')->name('admission.destroy');
 
 
 Route::get('/results','App\Http\Controllers\IndexController@results');
@@ -118,7 +128,7 @@ Route::get('/course_details/{id}','App\Http\Controllers\IndexController@course_d
 Route::get('/teacher_details/{id}','App\Http\Controllers\IndexController@teacher_details');
 Route::get('/contacts','App\Http\Controllers\IndexController@contacts');
 
-
+//end of frontend route
 
 
 

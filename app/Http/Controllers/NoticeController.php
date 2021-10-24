@@ -20,6 +20,7 @@ class NoticeController extends Controller
         // Search in the title and body columns from the posts table
         $notices = Notice::query()
             ->where('heading', 'LIKE', "%{$search}%")
+            ->orWhere('date', 'LIKE', "%{$search}%")
             ->paginate(6);
     
         // Return the search view with the resluts compacted
