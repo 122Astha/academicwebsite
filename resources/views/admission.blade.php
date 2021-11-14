@@ -136,10 +136,6 @@
                 </div>
             </div>
         </div>
-
-        {{--  --}}
-        {{--  --}}
-        {{--  --}}
      
         <!-- Registration Page Area End Here -->
         <!-- Footer Area Start Here -->

@@ -18,11 +18,11 @@
 													<div class="card-header">
 														<h3 class="card-title">Manage slider</h3><a href="{{ route('slider.create') }}"><button class="p-2 rounded btn-primary">Add slider</button></a>
 													</div>
-                                                                                            @if ($message = Session::get('success'))
-        <div class="alert alert-success">
-            <p>{{ $message }}</p>
-        </div>
-    @endif
+                                                              @if ($message = Session::get('success'))
+															<div class="alert alert-success">
+																<p>{{ $message }}</p>
+															</div>
+														@endif
 
 													<!-- /.card-header -->
 													<div class="card-body">
